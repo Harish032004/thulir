@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Complete your Thulir enrollment with your relationship preferences and values."
+    />
+    <title>Enrollment · Step 2 · Thulir</title>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+  <body>
+    <header class="site-header scrolled">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"
+          ><img src="assets/images/thulir-mark.png" alt="Thulir logo" /><span
+            class="brand-word"
+            ><strong>Thulir</strong><span>துளிர்</span></span
+          ></a
+        >
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a><a href="index.html#about">About</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" aria-hidden="true">
+      <aside class="mobile-panel">
+        <div class="mobile-panel-head">
+          <a class="brand" href="index.html"
+            ><img src="assets/images/thulir-mark.png" alt="Thulir logo" /><span
+              class="brand-word"
+              ><strong>Thulir</strong><span>துளிர்</span></span
+            ></a
+          ><button class="mobile-close" aria-label="Close menu">Close</button>
+        </div>
+        <nav class="mobile-links">
+          <a href="index.html">Home</a
+          ><a href="index.html#about">About Thulir</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a
+          ><a href="founder-story.html">Founder’s story</a>
+        </nav>
+        <p class="mobile-caption">
+          Your answers stay private and are reviewed by a real person.
+        </p>
+      </aside>
+    </div>
+
+    <main>
+      <!-- ENROLLMENT STEP 2 | Section-local CSS + JS -->
+      <style>
+        .enroll-page {
+          padding: 132px 0 80px;
+          min-height: 100svh;
+          background:
+            radial-gradient(
+              circle at 4% 8%,
+              rgba(120, 130, 24, 0.12),
+              transparent 24%
+            ),
+            var(--ivory);
+        }
+        .enroll-shell {
+          display: grid;
+          grid-template-columns: 0.58fr 1.42fr;
+          gap: 28px;
+          align-items: start;
+        }
+        .enroll-aside {
+          position: sticky;
+          top: 116px;
+          background: #3b3026;
+          color: #fff;
+          border-radius: 30px;
+          padding: 34px;
+          overflow: hidden;
+        }
+        .enroll-aside::after {
+          content: "";
+          position: absolute;
+          width: 230px;
+          height: 230px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          right: -120px;
+          bottom: -130px;
+        }
+        .enroll-aside img {
+          width: 115px;
+          filter: brightness(0) invert(1);
+          opacity: 0.9;
+        }
+        .enroll-aside h1 {
+          font: 600 3.3rem/0.9 var(--serif);
+          margin: 24px 0 18px;
+        }
+        .enroll-aside p {
+          color: #d6cabf;
+          font-size: 0.88rem;
+        }
+        .privacy-note {
+          border-top: 1px solid rgba(255, 255, 255, 0.14);
+          margin-top: 24px;
+          padding-top: 18px;
+          font-size: 0.74rem;
+          color: #bfb2a6;
+        }
+        .form-card {
+          background: var(--paper);
+          border: 1px solid var(--line);
+          border-radius: 30px;
+          padding: clamp(24px, 5vw, 48px);
+          box-shadow: var(--shadow);
+        }
+        .form-progress {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          gap: 14px;
+          align-items: center;
+          margin-bottom: 35px;
+        }
+        .form-progress strong {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+        }
+        .progress-track {
+          height: 6px;
+          border-radius: 99px;
+          background: var(--ivory-deep);
+          overflow: hidden;
+        }
+        .progress-fill {
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(90deg, var(--olive), var(--saffron));
+          border-radius: 99px;
+        }
+        .form-progress span {
+          font-size: 0.75rem;
+          color: var(--muted);
+        }
+        .form-intro h2 {
+          font: 600 clamp(2.4rem, 5vw, 4.4rem)/0.95 var(--serif);
+          margin: 0 0 12px;
+        }
+        .form-intro p {
+          color: var(--muted);
+          margin: 0 0 34px;
+        }
+        .resume-warning {
+          display: none;
+          background: #fff7df;
+          border: 1px solid #e9d393;
+          color: #6c5720;
+          padding: 14px;
+          border-radius: 14px;
+          margin-bottom: 24px;
+          font-size: 0.8rem;
+        }
+        .resume-warning.show {
+          display: block;
+        }
+        .question-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .field {
+          display: grid;
+          gap: 8px;
+        }
+        .field.full {
+          grid-column: 1/-1;
+        }
+        .field label,
+        .field legend {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: #514438;
+        }
+        .field .number {
+          color: var(--saffron);
+          margin-right: 6px;
+        }
+        .required {
+          color: #b25339;
+        }
+        .optional {
+          font-weight: 500;
+          color: #9a8c7f;
+          font-size: 0.7rem;
+        }
+        .field input,
+        .field select,
+        .field textarea {
+          width: 100%;
+          border: 1px solid var(--line);
+          background: #fffdfb;
+          border-radius: 14px;
+          padding: 13px 14px;
+          color: var(--ink);
+          outline: none;
+          transition: 0.2s;
+        }
+        .field textarea {
+          min-height: 116px;
+          resize: vertical;
+        }
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+          border-color: var(--olive);
+          box-shadow: 0 0 0 4px rgba(120, 130, 24, 0.09);
+        }
+        .choice-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .choice-row label {
+          position: relative;
+        }
+        .choice-row input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .choice-row span {
+          display: block;
+          border: 1px solid var(--line);
+          border-radius: 999px;
+          padding: 0.65rem 0.85rem;
+          font-size: 0.75rem;
+          background: #fff;
+          cursor: pointer;
+        }
+        .choice-row input:checked + span {
+          background: var(--ink);
+          border-color: var(--ink);
+          color: #fff;
+        }
+        .consent-box {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          border: 1px solid var(--line);
+          padding: 16px;
+          border-radius: 15px;
+          background: var(--ivory);
+        }
+        .consent-box input {
+          width: 18px;
+          height: 18px;
+          margin-top: 3px;
+        }
+        .consent-box label {
+          font-size: 0.78rem;
+          color: var(--muted);
+        }
+        .form-actions {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          margin-top: 36px;
+          padding-top: 26px;
+          border-top: 1px solid var(--line);
+        }
+        .form-error {
+          display: none;
+          color: #a03f2b;
+          background: #fff0eb;
+          border: 1px solid #efc8bb;
+          padding: 12px 14px;
+          border-radius: 12px;
+          margin-top: 20px;
+          font-size: 0.8rem;
+        }
+        .form-error.show {
+          display: block;
+        }
+        .submit-note {
+          text-align: center;
+          color: var(--muted);
+          font-size: 0.72rem;
+          margin-top: 14px;
+        }
+        .success-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(35, 28, 22, 0.52);
+          backdrop-filter: blur(9px);
+          z-index: 2000;
+          display: grid;
+          place-items: center;
+          padding: 20px;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s;
+        }
+        .success-overlay.show {
+          opacity: 1;
+          visibility: visible;
+        }
+        .success-card {
+          max-width: 570px;
+          background: var(--paper);
+          border-radius: 30px;
+          padding: 44px;
+          text-align: center;
+          box-shadow: var(--shadow);
+          transform: translateY(15px);
+          transition: 0.3s;
+        }
+        .success-overlay.show .success-card {
+          transform: none;
+        }
+        .success-mark {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          margin: 0 auto 20px;
+          background: rgba(120, 130, 24, 0.12);
+          display: grid;
+          place-items: center;
+          color: var(--olive-deep);
+          font-size: 2rem;
+        }
+        .success-card h2 {
+          font: 600 3rem/0.95 var(--serif);
+          margin: 0 0 15px;
+        }
+        .success-card p {
+          color: var(--muted);
+        }
+        @media (max-width: 920px) {
+          .enroll-shell {
+            grid-template-columns: 1fr;
+          }
+          .enroll-aside {
+            position: static;
+          }
+          .enroll-aside h1 {
+            font-size: 2.7rem;
+          }
+          .enroll-aside img {
+            width: 90px;
+          }
+        }
+        @media (max-width: 650px) {
+          .question-grid {
+            grid-template-columns: 1fr;
+          }
+          .field.full {
+            grid-column: auto;
+          }
+          .form-card {
+            padding: 24px 18px;
+          }
+          .enroll-page {
+            padding-top: 110px;
+          }
+          .form-actions {
+            flex-direction: column-reverse;
+          }
+          .form-actions .btn {
+            width: 100%;
+          }
+          .success-card {
+            padding: 34px 22px;
+          }
+        }
+      </style>
+      <script src="assets/js/google-form-config.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const questions = [
+            {
+              id: "s2_q01",
+              label: "Preferred age range",
+              type: "text",
+              required: true,
+              placeholder: "e.g. 30–38",
+            },
+            {
+              id: "s2_q02",
+              label: "Gender(s) you are open to meeting",
+              type: "text",
+              required: true,
+            },
+            {
+              id: "s2_q03",
+              label: "Preferred cities, states, or regions",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q04",
+              label: "Would you consider someone living elsewhere?",
+              type: "radio",
+              required: true,
+              options: [
+                "Yes, anywhere in India",
+                "Yes, selected cities",
+                "Only near my current city",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q05",
+              label: "Marital backgrounds you are open to",
+              type: "radio",
+              required: true,
+              options: [
+                "Any genuine single person",
+                "Never married",
+                "Divorced",
+                "Widowed",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q06",
+              label: "Are you open to a partner who has children?",
+              type: "radio",
+              required: true,
+              options: ["Yes", "Maybe", "No", "Depends on circumstances"],
+            },
+            {
+              id: "s2_q07",
+              label:
+                "What role would children ideally have in your future relationship?",
+              type: "textarea",
+              required: false,
+              full: true,
+            },
+            {
+              id: "s2_q08",
+              label: "Do you hope to have children in the future?",
+              type: "radio",
+              required: true,
+              options: [
+                "Yes",
+                "No",
+                "Maybe / undecided",
+                "Already have children and do not plan more",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q09",
+              label: "Is height important to you?",
+              type: "text",
+              required: false,
+              placeholder: "Optional preference",
+            },
+            {
+              id: "s2_q10",
+              label: "Education preference",
+              type: "select",
+              required: true,
+              options: [
+                "Not important",
+                "Similar educational background preferred",
+                "Specific qualification preferred",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q11",
+              label: "Occupation or career preference",
+              type: "textarea",
+              required: false,
+              full: true,
+              placeholder:
+                "What matters — stability, ambition, schedule, field, or something else?",
+            },
+            {
+              id: "s2_q12",
+              label: "How important is shared religion or spirituality?",
+              type: "select",
+              required: true,
+              options: [
+                "Essential",
+                "Important but flexible",
+                "Open to different beliefs",
+                "Not important",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q13",
+              label: "How important is community / caste compatibility?",
+              type: "select",
+              required: true,
+              options: [
+                "Essential",
+                "Preferred but flexible",
+                "Not important",
+                "Prefer not to specify",
+              ],
+            },
+            {
+              id: "s2_q14",
+              label: "Dietary compatibility",
+              type: "select",
+              required: true,
+              options: [
+                "Essential",
+                "Preferred but flexible",
+                "Not important",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q15",
+              label: "Your comfort with a partner who smokes",
+              type: "select",
+              required: true,
+              options: [
+                "Not comfortable",
+                "Occasional smoking may be okay",
+                "Comfortable",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q16",
+              label: "Your comfort with a partner who drinks alcohol",
+              type: "select",
+              required: true,
+              options: [
+                "Not comfortable",
+                "Social drinking may be okay",
+                "Comfortable",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s2_q17",
+              label: "What lifestyle pace feels compatible?",
+              type: "radio",
+              required: true,
+              options: [
+                "Quiet and home-centred",
+                "Balanced",
+                "Social and active",
+                "Adventurous and spontaneous",
+                "Flexible",
+              ],
+            },
+            {
+              id: "s2_q18",
+              label: "What level of family involvement feels healthy to you?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q19",
+              label: "What does financial compatibility mean to you?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q20",
+              label: "How do you prefer to communicate in a relationship?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q21",
+              label: "How do you naturally give and receive affection?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q22",
+              label: "How should disagreements ideally be handled?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q23",
+              label: "Which shared interests would make a relationship richer?",
+              type: "textarea",
+              required: false,
+              full: true,
+            },
+            {
+              id: "s2_q24",
+              label: "Name five values you most want to share with a partner",
+              type: "textarea",
+              required: true,
+              full: true,
+              placeholder:
+                "For example: honesty, kindness, curiosity, family, independence",
+            },
+            {
+              id: "s2_q25",
+              label: "What are your relationship non-negotiables?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q26",
+              label: "What are your clear dealbreakers?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q27",
+              label:
+                "What have past relationships or life experiences taught you?",
+              type: "textarea",
+              required: false,
+              full: true,
+            },
+            {
+              id: "s2_q28",
+              label: "Describe the relationship you hope to build",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s2_q29",
+              label: "What would help you feel comfortable at a first meeting?",
+              type: "textarea",
+              required: true,
+              full: true,
+              placeholder:
+                "Venue, timing, support, communication, accessibility…",
+            },
+            {
+              id: "s2_q30",
+              label:
+                "I give consent for Thulir to privately review these answers, contact me for an intake call, and use my preferences only for consent-led matchmaking.",
+              type: "consent",
+              required: true,
+              full: true,
+            },
+          ];
+          const labels = {};
+          questions.forEach(
+            (q, i) =>
+              (labels[q.id] = `${String(i + 1).padStart(2, "0")}. ${q.label}`),
+          );
+          const escapeHtml = (s) =>
+            String(s ?? "").replace(
+              /[&<>"]/g,
+              (m) =>
+                ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[m],
+            );
+          const render = (q) => {
+            const req = q.required
+              ? '<span class="required">*</span>'
+              : ' <span class="optional">optional</span>';
+            const label = `<span class="number">${String(questions.indexOf(q) + 1).padStart(2, "0")}</span>${escapeHtml(q.label)} ${req}`;
+            if (q.type === "consent")
+              return `<div class="field full"><div class="consent-box"><input id="${q.id}" name="${q.id}" type="checkbox" required><label for="${q.id}">${label}</label></div></div>`;
+            if (q.type === "radio")
+              return `<fieldset class="field ${q.full ? "full" : ""}"><legend>${label}</legend><div class="choice-row">${q.options.map((o) => `<label><input type="radio" name="${q.id}" value="${escapeHtml(o)}" ${q.required ? "required" : ""}><span>${escapeHtml(o)}</span></label>`).join("")}</div></fieldset>`;
+            let input = "";
+            if (q.type === "select")
+              input = `<select id="${q.id}" name="${q.id}" ${q.required ? "required" : ""}><option value="">Choose an option</option>${q.options.map((o) => `<option>${escapeHtml(o)}</option>`).join("")}</select>`;
+            else if (q.type === "textarea")
+              input = `<textarea id="${q.id}" name="${q.id}" placeholder="${escapeHtml(q.placeholder || "")}" ${q.required ? "required" : ""}></textarea>`;
+            else
+              input = `<input id="${q.id}" name="${q.id}" type="${q.type}" placeholder="${escapeHtml(q.placeholder || "")}" ${q.required ? "required" : ""}>`;
+            return `<div class="field ${q.full ? "full" : ""}"><label for="${q.id}">${label}</label>${input}</div>`;
+          };
+          document.getElementById("step2Questions").innerHTML = questions
+            .map(render)
+            .join("");
+          const step1 = JSON.parse(
+            sessionStorage.getItem("thulirStep1") || "{}",
+          );
+          if (!Object.keys(step1).length)
+            document.getElementById("resumeWarning").classList.add("show");
+          const saved = JSON.parse(
+            sessionStorage.getItem("thulirStep2") || "{}",
+          );
+          Object.entries(saved).forEach(([k, v]) =>
+            document.querySelectorAll(`[name="${k}"]`).forEach((n) => {
+              if (n.type === "radio" || n.type === "checkbox")
+                n.checked = n.value === v || v === true;
+              else n.value = v;
+            }),
+          );
+          const format = (data, prefixLabels) =>
+            Object.entries(data)
+              .map(
+                ([k, v]) =>
+                  `${prefixLabels[k] || k}\n${v === true ? "Yes" : v || "—"}`,
+              )
+              .join("\n\n");
+          const step1Labels = {
+            s1_q01: "01. Full legal name",
+            s1_q02: "02. Preferred name",
+            s1_q03: "03. Date of birth",
+            s1_q04: "04. Email",
+            s1_q05: "05. Mobile / WhatsApp",
+            s1_q06: "06. Current city",
+            s1_q07: "07. State / UT",
+            s1_q08: "08. Country",
+            s1_q09: "09. Gender identity",
+            s1_q10: "10. Pronouns",
+            s1_q11: "11. Marital status",
+            s1_q12: "12. Children",
+            s1_q13: "13. Children details",
+            s1_q14: "14. Occupation",
+            s1_q15: "15. Industry",
+            s1_q16: "16. Education",
+            s1_q17: "17. Languages",
+            s1_q18: "18. Religion / spiritual outlook",
+            s1_q19: "19. Community / caste",
+            s1_q20: "20. Height",
+            s1_q21: "21. Diet",
+            s1_q22: "22. Smoking",
+            s1_q23: "23. Alcohol",
+            s1_q24: "24. Living arrangement",
+            s1_q25: "25. Relocation",
+            s1_q26: "26. Typical weekday",
+            s1_q27: "27. Weekends",
+            s1_q28: "28. Hobbies / interests",
+            s1_q29: "29. Why now",
+            s1_q30: "30. Step 1 consent",
+          };
+          document
+            .getElementById("step2Form")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+              const form = e.currentTarget,
+                error = document.getElementById("formError");
+              if (!Object.keys(step1).length) {
+                error.textContent =
+                  "Please complete Step 1 before submitting your enrollment.";
+                error.classList.add("show");
+                return;
+              }
+              if (!form.checkValidity()) {
+                form.reportValidity();
+                error.textContent =
+                  "Please complete the required questions before submitting.";
+                error.classList.add("show");
+                return;
+              }
+              const data = {};
+              questions.forEach((q) => {
+                if (q.type === "radio")
+                  data[q.id] =
+                    form.querySelector(`[name="${q.id}"]:checked`)?.value || "";
+                else if (q.type === "consent")
+                  data[q.id] = form.elements[q.id].checked;
+                else data[q.id] = form.elements[q.id].value.trim();
+              });
+              sessionStorage.setItem("thulirStep2", JSON.stringify(data));
+              const cfg = window.THULIR_GOOGLE_FORM || {};
+              if (
+                !cfg.formAction ||
+                cfg.formAction.includes("YOUR_FORM_ID") ||
+                !cfg.step1Entry ||
+                cfg.step1Entry.includes("STEP_1")
+              ) {
+                error.innerHTML =
+                  "<strong>Google Form setup is not connected yet.</strong> Add the Google Form action URL and entry IDs in <code>assets/js/google-form-config.js</code>. Your answers remain saved in this browser.";
+                error.classList.add("show");
+                return;
+              }
+              error.classList.remove("show");
+              const payload = new FormData();
+              const plan =
+                sessionStorage.getItem("thulirPlan") || "Not selected";
+              payload.append(
+                cfg.step1Entry,
+                `Selected plan: ${plan}\n\n${format(step1, step1Labels)}`,
+              );
+              payload.append(cfg.step2Entry, format(data, labels));
+              if (
+                cfg.referenceEntry &&
+                !cfg.referenceEntry.includes("REFERENCE_ENTRY_ID")
+              )
+                payload.append(cfg.referenceEntry, `THULIR-${Date.now()}`);
+              const hidden = document.createElement("form");
+              hidden.method = "POST";
+              hidden.action = cfg.formAction;
+              hidden.target = "googleFormTarget";
+              hidden.style.display = "none";
+              for (const [name, value] of payload.entries()) {
+                const input = document.createElement("input");
+                input.type = "hidden";
+                input.name = name;
+                input.value = value;
+                hidden.appendChild(input);
+              }
+              document.body.appendChild(hidden);
+              hidden.submit();
+              document.querySelector('[type="submit"]').disabled = true;
+              setTimeout(() => {
+                document.getElementById("successOverlay").classList.add("show");
+                sessionStorage.removeItem("thulirStep1");
+                sessionStorage.removeItem("thulirStep2");
+                sessionStorage.removeItem("thulirPlan");
+              }, 1200);
+            });
+        });
+      </script>
+      <section class="enroll-page">
+        <div class="container enroll-shell">
+          <aside class="enroll-aside reveal">
+            <img src="assets/images/thulir-mark.png" alt="Thulir" />
+            <h1>What matters to you.</h1>
+            <p>
+              This second step helps your matchmaker understand the values,
+              compatibility, and kind of relationship you hope to build.
+            </p>
+            <div class="privacy-note">
+              No profile is shared and no introduction is made without your
+              explicit consent.
+            </div>
+          </aside>
+          <section class="form-card reveal" aria-labelledby="formTitle">
+            <div class="form-progress">
+              <strong>Step 2 of 2</strong>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+              <span>30 questions</span>
+            </div>
+            <div class="resume-warning" id="resumeWarning">
+              Step 1 details were not found in this browser. Please return to
+              Step 1 before submitting.
+            </div>
+            <div class="form-intro">
+              <h2 id="formTitle">Your connection</h2>
+              <p>
+                Be honest rather than perfect. These answers guide a real
+                matchmaker, not an algorithm.
+              </p>
+            </div>
+            <form id="step2Form" novalidate>
+              <div class="question-grid" id="step2Questions"></div>
+              <div class="form-error" id="formError" role="alert"></div>
+              <div class="form-actions">
+                <a class="btn btn-soft" href="enroll.html">Back to Step 1</a
+                ><button class="btn btn-primary btn-arrow" type="submit">
+                  Submit enrollment
+                </button>
+              </div>
+              <p class="submit-note">
+                Submission is sent privately to the connected Thulir Google
+                Form.
+              </p>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+    <iframe
+      name="googleFormTarget"
+      title="Google Form submission target"
+      hidden
+    ></iframe>
+    <div
+      class="success-overlay"
+      id="successOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="successTitle"
+    >
+      <div class="success-card">
+        <div class="success-mark">✓</div>
+        <h2 id="successTitle">Your story is with us.</h2>
+        <p>
+          Thank you for trusting Thulir. Your enrollment has been submitted
+          privately. A member of the team will review it with care and contact
+          you for the next conversation.
+        </p>
+        <a class="btn btn-primary" href="index.html">Return to Thulir</a>
+      </div>
+    </div>
+    <script src="assets/js/global.js"></script>
+  </body>
+</html>

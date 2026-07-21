@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Read why Thulir was founded and the belief behind its human-led approach to matchmaking."
+    />
+    <meta name="theme-color" content="#fbf7f1" />
+    <title>Founder’s Story · Thulir</title>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"
+          ><img src="assets/images/thulir-mark.png" alt="" /><span
+            class="brand-word"
+            ><strong>Thulir</strong><span>துளிர்</span></span
+          ></a
+        >
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a><a href="index.html#about">About</a
+          ><a href="index.html#how-it-works">How it works</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a
+          ><a class="active" href="founder-story.html">Our story</a
+          ><a class="btn btn-primary nav-cta" href="enroll.html"
+            >Begin journey</a
+          >
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" aria-hidden="true">
+      <aside class="mobile-panel">
+        <div class="mobile-panel-head">
+          <a class="brand" href="index.html"
+            ><img src="assets/images/thulir-mark.png" alt="" /><span
+              class="brand-word"
+              ><strong>Thulir</strong><span>துளிர்</span></span
+            ></a
+          ><button class="mobile-close" aria-label="Close menu">Close</button>
+        </div>
+        <nav class="mobile-links">
+          <a href="index.html">Home</a
+          ><a href="index.html#about">About Thulir</a
+          ><a href="index.html#how-it-works">How it works</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a
+          ><a href="founder-story.html">Founder’s story</a>
+        </nav>
+        <a class="btn btn-primary" href="enroll.html">Begin your journey</a>
+        <p class="mobile-caption">Human-led · Verified · Consent-first</p>
+      </aside>
+    </div>
+
+    <main id="main">
+      <!-- FOUNDER STORY HERO | Section-local CSS -->
+      <style>
+        .story-hero {
+          padding: 128px 0 84px;
+          position: relative;
+          overflow: hidden;
+        }
+        .story-hero::before {
+          content: "";
+          position: absolute;
+          width: 720px;
+          height: 720px;
+          border: 1px solid rgba(127, 136, 31, 0.12);
+          border-radius: 50%;
+          right: -410px;
+          top: -320px;
+        }
+        .story-hero-grid {
+          min-height: 540px;
+          display: grid;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 70px;
+          align-items: center;
+        }
+        .story-hero h1 {
+          font: 600 clamp(4.2rem, 8vw, 8.7rem)/0.78 var(--serif);
+          letter-spacing: -0.06em;
+          margin: 22px 0 25px;
+        }
+        .story-hero h1 em {
+          display: block;
+          color: var(--olive-deep);
+          font-weight: 500;
+        }
+        .story-hero .section-copy {
+          font-size: 1.08rem;
+        }
+        .story-hero-sign {
+          margin-top: 28px;
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          color: var(--muted);
+          font-size: 0.74rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+        .story-hero-sign::before {
+          content: "";
+          width: 48px;
+          height: 1px;
+          background: var(--saffron);
+        }
+        .story-collage {
+          height: 500px;
+          position: relative;
+        }
+        .story-main-photo {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 78%;
+          height: 100%;
+          border-radius: 36px 36px 48% 36px;
+          overflow: hidden;
+          border: 7px solid rgba(255, 255, 255, 0.65);
+          box-shadow: var(--shadow);
+          background: #ded2c7;
+        }
+        .story-main-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: saturate(0.78) sepia(0.08);
+        }
+        .story-main-photo::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(46, 34, 26, 0.36)
+          );
+        }
+        .story-small-photo {
+          position: absolute;
+          left: 0;
+          bottom: 34px;
+          width: 235px;
+          height: 245px;
+          border-radius: 26px;
+          overflow: hidden;
+          border: 6px solid var(--ivory);
+          box-shadow: var(--shadow-sm);
+          z-index: 2;
+        }
+        .story-small-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .story-quote-seal {
+          position: absolute;
+          left: 66px;
+          top: 26px;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background: var(--ink);
+          color: #fff;
+          display: grid;
+          place-items: center;
+          text-align: center;
+          padding: 20px;
+          z-index: 3;
+          font: italic 1.05rem/1.18 var(--serif);
+          transform: rotate(-5deg);
+        }
+        @media (max-width: 900px) {
+          .story-hero-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+          }
+          .story-collage {
+            height: 460px;
+            max-width: 690px;
+          }
+          .story-hero {
+            padding-top: 112px;
+          }
+        }
+        @media (max-width: 620px) {
+          .story-hero {
+            padding: 98px 0 62px;
+          }
+          .story-hero-grid {
+            min-height: auto;
+          }
+          .story-hero h1 {
+            font-size: clamp(3.4rem, 17vw, 5.2rem);
+          }
+          .story-collage {
+            height: 360px;
+          }
+          .story-main-photo {
+            width: 88%;
+            border-width: 5px;
+            border-radius: 28px 28px 42% 28px;
+          }
+          .story-small-photo {
+            width: 150px;
+            height: 160px;
+            border-width: 4px;
+            bottom: 18px;
+          }
+          .story-quote-seal {
+            width: 108px;
+            height: 108px;
+            left: 32px;
+            top: 12px;
+            font-size: 0.82rem;
+            padding: 14px;
+          }
+        }
+      </style>
+      <section class="story-hero">
+        <div class="container story-hero-grid">
+          <div class="reveal">
+            <span class="eyebrow">FOUNDER'S STORY</span>
+            <h1>Why I built <em>Thulir.</em></h1>
+            <p class="section-copy">
+              A personal belief that relationships can begin with less
+              interference, more self-knowledge, and real human care.
+            </p>
+            <div class="story-hero-sign">Founder, Thulir</div>
+          </div>
+          <div class="story-collage reveal">
+            <figure class="story-main-photo">
+              <img
+                src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+                alt="Editorial placeholder for the Thulir founder"
+              />
+            </figure>
+            <figure class="story-small-photo">
+              <img
+                src="https://images.pexels.com/photos/3845995/pexels-photo-3845995.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                alt="A medical professional at work"
+              />
+            </figure>
+            <div class="story-quote-seal">
+              Healing taught me to listen before I act.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY OPENING QUOTE | Section-local CSS -->
+      <style>
+        .story-opening {
+          padding: 0 0 92px;
+        }
+        .story-opening-card {
+          max-width: 1040px;
+          margin: auto;
+          border: 1px solid var(--line);
+          border-radius: 30px;
+          background: var(--paper);
+          padding: clamp(30px, 6vw, 62px);
+          display: grid;
+          grid-template-columns: 120px 1fr;
+          gap: 30px;
+          align-items: start;
+          box-shadow: var(--shadow-sm);
+        }
+        .story-opening-mark {
+          font: 500 9rem/0.6 var(--serif);
+          color: var(--saffron);
+          padding-top: 16px;
+        }
+        .story-opening blockquote {
+          font: 500 clamp(2rem, 3.8vw, 3.7rem)/1.12 var(--serif);
+          margin: 0;
+          color: #4a3c31;
+        }
+        .story-opening cite {
+          display: block;
+          margin-top: 22px;
+          font-style: normal;
+          color: var(--muted);
+          font-size: 0.72rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+        }
+        @media (max-width: 620px) {
+          .story-opening {
+            padding-bottom: 72px;
+          }
+          .story-opening-card {
+            grid-template-columns: 1fr;
+            gap: 4px;
+            border-radius: 23px;
+            padding: 25px 21px;
+          }
+          .story-opening-mark {
+            font-size: 6rem;
+          }
+          .story-opening blockquote {
+            font-size: 1.8rem;
+          }
+        }
+      </style>
+      <section class="story-opening">
+        <div class="container">
+          <div class="story-opening-card reveal">
+            <div class="story-opening-mark">“</div>
+            <div>
+              <blockquote>
+                Finding a partner — the first time, or after loss — can be
+                dignified, intentional, and free of the noise.
+              </blockquote>
+              <cite>— Founder, Thulir</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER STORY BODY | Section-local CSS + JS -->
+      <style>
+        .story-body {
+          padding: 112px 0;
+          background: var(--paper);
+          border-block: 1px solid var(--line);
+        }
+        .story-body-layout {
+          display: grid;
+          grid-template-columns: 280px 1fr;
+          gap: 78px;
+          align-items: start;
+        }
+        .story-index {
+          position: sticky;
+          top: 120px;
+        }
+        .story-index strong {
+          display: block;
+          font: 600 2rem var(--serif);
+          margin-bottom: 18px;
+        }
+        .story-index nav {
+          display: grid;
+          gap: 8px;
+        }
+        .story-index a {
+          font-size: 0.75rem;
+          color: var(--muted);
+          padding: 10px 12px;
+          border-left: 2px solid var(--line);
+          transition: 0.22s;
+        }
+        .story-index a:hover,
+        .story-index a.active {
+          color: var(--ink);
+          border-left-color: var(--saffron);
+          background: linear-gradient(
+            90deg,
+            rgba(223, 129, 60, 0.08),
+            transparent
+          );
+        }
+        .story-chapters {
+          display: grid;
+          gap: 24px;
+        }
+        .story-chapter {
+          scroll-margin-top: 140px;
+          display: grid;
+          grid-template-columns: 105px 1fr;
+          gap: 28px;
+          padding: 34px;
+          border: 1px solid var(--line);
+          border-radius: 28px;
+          background: var(--ivory);
+          transition: 0.3s;
+        }
+        .story-chapter:hover {
+          transform: translateY(-5px);
+          box-shadow: var(--shadow);
+          border-color: rgba(127, 136, 31, 0.38);
+        }
+        .chapter-number {
+          font: 600 4.2rem/0.8 var(--serif);
+          color: var(--saffron);
+        }
+        .chapter-copy .chapter-label {
+          font-size: 0.65rem;
+          letter-spacing: 0.17em;
+          text-transform: uppercase;
+          color: var(--olive-deep);
+          font-weight: 700;
+        }
+        .chapter-copy p {
+          font: 500 clamp(1.35rem, 2.1vw, 1.9rem)/1.48 var(--serif);
+          color: #55463a;
+          margin: 12px 0 0;
+        }
+        .story-signature {
+          margin-top: 14px;
+          padding: 32px;
+          border-radius: 28px;
+          background: #352c24;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+        }
+        .story-signature p {
+          margin: 0;
+          color: #d6c9be;
+        }
+        .story-signature strong {
+          font: 600 2rem var(--serif);
+          color: #fff;
+        }
+        @media (max-width: 900px) {
+          .story-body-layout {
+            grid-template-columns: 1fr;
+            gap: 35px;
+          }
+          .story-index {
+            position: static;
+          }
+          .story-index nav {
+            display: flex;
+            overflow: auto;
+          }
+          .story-index a {
+            white-space: nowrap;
+            border-left: 0;
+            border-bottom: 2px solid var(--line);
+          }
+        }
+        @media (max-width: 620px) {
+          .story-body {
+            padding: 84px 0;
+          }
+          .story-chapter {
+            grid-template-columns: 1fr;
+            padding: 24px 20px;
+            border-radius: 22px;
+            gap: 10px;
+          }
+          .chapter-number {
+            font-size: 3.2rem;
+          }
+          .chapter-copy p {
+            font-size: 1.35rem;
+          }
+          .story-signature {
+            align-items: flex-start;
+            flex-direction: column;
+            border-radius: 22px;
+            padding: 24px 20px;
+          }
+          .story-signature .btn {
+            width: 100%;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const links = [...document.querySelectorAll(".story-index a")];
+          const chapters = links
+            .map((link) => document.querySelector(link.getAttribute("href")))
+            .filter(Boolean);
+          const observer = new IntersectionObserver(
+            (entries) =>
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  links.forEach((link) =>
+                    link.classList.toggle(
+                      "active",
+                      link.getAttribute("href") === "#" + entry.target.id,
+                    ),
+                  );
+                }
+              }),
+            { rootMargin: "-35% 0px -55%", threshold: 0 },
+          );
+          chapters.forEach((chapter) => observer.observe(chapter));
+        });
+      </script>
+      <section class="story-body">
+        <div class="container story-body-layout">
+          <aside class="story-index reveal">
+            <strong>The story, in three moments.</strong>
+            <nav>
+              <a class="active" href="#chapter-1">01 · The training</a
+              ><a href="#chapter-2">02 · The observation</a
+              ><a href="#chapter-3">03 · The belief</a>
+            </nav>
+          </aside>
+          <div class="story-chapters">
+            <article class="story-chapter reveal" id="chapter-1">
+              <div class="chapter-number">01</div>
+              <div class="chapter-copy">
+                <span class="chapter-label">The training</span>
+                <p>
+                  I am a practicing pediatric surgeon by training — but
+                  somewhere along the way, I became just as invested in the
+                  science of relationships as I am in the science of healing.
+                </p>
+              </div>
+            </article>
+            <article class="story-chapter reveal" id="chapter-2">
+              <div class="chapter-number">02</div>
+              <div class="chapter-copy">
+                <span class="chapter-label">The observation</span>
+                <p>
+                  Over years of clinical practice, I watched something else
+                  unfold quietly around me: marriages ending, families
+                  fracturing, and often, well-meaning relatives and parents
+                  shaping decisions that were never truly theirs to make.
+                </p>
+              </div>
+            </article>
+            <article class="story-chapter reveal" id="chapter-3">
+              <div class="chapter-number">03</div>
+              <div class="chapter-copy">
+                <span class="chapter-label">The belief</span>
+                <p>
+                  In India, love rarely happens in isolation — families,
+                  society, and circumstance all have a hand in it.
+                </p>
+              </div>
+            </article>
+            <article class="story-chapter reveal">
+              <div class="chapter-number">04</div>
+              <div class="chapter-copy">
+                <span class="chapter-label">The reason</span>
+                <p>
+                  I started Thulir because I believe it doesn't have to be this
+                  way. That finding a partner — the first time, or after loss —
+                  can be dignified, intentional, and free of the noise.
+                </p>
+              </div>
+            </article>
+            <article class="story-chapter reveal">
+              <div class="chapter-number">05</div>
+              <div class="chapter-copy">
+                <span class="chapter-label">The intention</span>
+                <p>
+                  Thulir is my attempt to change how relationships begin in
+                  India: with less interference, more self-knowledge, and real
+                  human care guiding the way.
+                </p>
+              </div>
+            </article>
+            <div class="story-signature reveal">
+              <div>
+                <strong>— Founder, Thulir</strong>
+                <p>A quieter, more thoughtful way to begin.</p>
+              </div>
+              <a class="btn" href="enroll.html">Begin your journey ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER BELIEFS | Section-local CSS -->
+      <style>
+        .beliefs {
+          padding: 108px 0;
+        }
+        .beliefs-head {
+          text-align: center;
+          max-width: 760px;
+          margin: 0 auto 46px;
+        }
+        .beliefs-head .eyebrow {
+          justify-content: center;
+        }
+        .belief-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+        }
+        .belief {
+          border: 1px solid var(--line);
+          border-radius: 28px;
+          padding: 32px;
+          background: rgba(255, 255, 255, 0.54);
+          min-height: 270px;
+          position: relative;
+          overflow: hidden;
+          transition: 0.3s;
+        }
+        .belief::after {
+          content: "";
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: rgba(127, 136, 31, 0.07);
+          right: -55px;
+          bottom: -60px;
+        }
+        .belief:hover {
+          transform: translateY(-6px);
+          box-shadow: var(--shadow);
+        }
+        .belief span {
+          font: 600 3.3rem var(--serif);
+          color: var(--saffron);
+        }
+        .belief h2 {
+          font: 600 2rem/1 var(--serif);
+          margin: 14px 0;
+        }
+        .belief p {
+          color: var(--muted);
+          font-size: 0.88rem;
+          position: relative;
+          z-index: 1;
+        }
+        @media (max-width: 780px) {
+          .belief-grid {
+            grid-template-columns: 1fr;
+          }
+          .belief {
+            min-height: auto;
+          }
+          .beliefs {
+            padding: 84px 0;
+          }
+        }
+      </style>
+      <section class="beliefs">
+        <div class="container">
+          <div class="beliefs-head reveal">
+            <span class="eyebrow">THE THULIR APPROACH</span>
+            <h2 class="section-title">
+              Care is not an extra. It is the method.
+            </h2>
+          </div>
+          <div class="belief-grid">
+            <article class="belief reveal">
+              <span>01</span>
+              <h2>Listen before matching</h2>
+              <p>
+                Every introduction begins with understanding the person, not
+                ticking boxes on a profile.
+              </p>
+            </article>
+            <article class="belief reveal">
+              <span>02</span>
+              <h2>Protect agency</h2>
+              <p>
+                Your story, preferences, and personal details remain yours.
+                Consent comes before every introduction.
+              </p>
+            </article>
+            <article class="belief reveal">
+              <span>03</span>
+              <h2>Stay beyond hello</h2>
+              <p>
+                Support continues after an introduction through feedback,
+                events, coaching, and genuine human presence.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER CTA | Section-local CSS -->
+      <style>
+        .story-cta {
+          padding: 0 0 110px;
+        }
+        .story-cta-card {
+          background: linear-gradient(135deg, #352c24, #45372c);
+          color: #fff;
+          text-align: center;
+          padding: clamp(44px, 8vw, 82px);
+          border-radius: 36px;
+          position: relative;
+          overflow: hidden;
+        }
+        .story-cta-card::before {
+          content: "";
+          position: absolute;
+          width: 360px;
+          height: 360px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.09);
+          left: -220px;
+          bottom: -240px;
+        }
+        .story-cta-card h2 {
+          font: 600 clamp(2.9rem, 6vw, 6rem)/0.88 var(--serif);
+          margin: 0 auto 22px;
+          max-width: 860px;
+        }
+        .story-cta-card p {
+          color: #d7cabe;
+          max-width: 610px;
+          margin: 0 auto 28px;
+        }
+        .story-cta-card .btn {
+          background: #fff;
+          color: var(--ink);
+        }
+        @media (max-width: 620px) {
+          .story-cta {
+            padding-bottom: 82px;
+          }
+          .story-cta-card {
+            border-radius: 24px;
+          }
+        }
+      </style>
+      <section class="story-cta">
+        <div class="container story-cta-card reveal">
+          <h2>A more human beginning starts here.</h2>
+          <p>
+            Share your story privately. A real person will read it with care.
+          </p>
+          <a class="btn btn-arrow" href="enroll.html">Begin your journey</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-identity">
+            <img src="assets/images/thulir-mark.png" alt="" />
+            <div class="footer-brand">
+              <h2>Thulir <span class="tamil">· துளிர்</span></h2>
+              <div class="footer-tagline">Life always finds a way to grow.</div>
+            </div>
+          </div>
+          <div class="footer-nav-area">
+            <div class="footer-column">
+              <strong>Explore</strong>
+              <nav class="footer-links">
+                <a href="index.html">Home</a><a href="index.html#about">About</a
+                ><a href="index.html#how-it-works">How it works</a
+                ><a href="index.html#membership">Membership</a
+                ><a href="index.html#faq">FAQ</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <strong>More</strong>
+              <nav class="footer-links">
+                <a href="process.html">Full process</a
+                ><a href="founder-story.html">Founder’s story</a
+                ><a href="enroll.html">Enrollment</a><span>Chennai, India</span>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="footer-journey">
+          <p>
+            <strong>Ready for a thoughtful beginning?</strong>Your first step is
+            private, unhurried, and entirely yours.
+          </p>
+          <a class="btn" href="enroll.html">Begin your journey ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Thulir. Chennai, India. All rights reserved.</span
+          ><span>Human-led · Verified · Consent-first</span>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/global.js"></script>
+  </body>
+</html>

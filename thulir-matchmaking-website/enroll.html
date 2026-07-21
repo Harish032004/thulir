@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Begin your private Thulir enrollment. Step one covers your background, lifestyle, and readiness."
+    />
+    <title>Enrollment · Step 1 · Thulir</title>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+  <body>
+    <header class="site-header scrolled">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"
+          ><img src="assets/images/thulir-mark.png" alt="Thulir logo" /><span
+            class="brand-word"
+            ><strong>Thulir</strong><span>துளிர்</span></span
+          ></a
+        >
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a><a href="index.html#about">About</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" aria-hidden="true">
+      <aside class="mobile-panel">
+        <div class="mobile-panel-head">
+          <a class="brand" href="index.html"
+            ><img src="assets/images/thulir-mark.png" alt="Thulir logo" /><span
+              class="brand-word"
+              ><strong>Thulir</strong><span>துளிர்</span></span
+            ></a
+          ><button class="mobile-close" aria-label="Close menu">Close</button>
+        </div>
+        <nav class="mobile-links">
+          <a href="index.html">Home</a
+          ><a href="index.html#about">About Thulir</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a
+          ><a href="founder-story.html">Founder’s story</a>
+        </nav>
+        <p class="mobile-caption">
+          Your answers stay private and are reviewed by a real person.
+        </p>
+      </aside>
+    </div>
+
+    <main>
+      <!-- ENROLLMENT STEP 1 | Section-local CSS + JS -->
+      <style>
+        .enroll-page {
+          padding: 132px 0 80px;
+          min-height: 100svh;
+          background:
+            radial-gradient(
+              circle at 95% 5%,
+              rgba(220, 123, 53, 0.12),
+              transparent 24%
+            ),
+            var(--ivory);
+        }
+        .enroll-shell {
+          display: grid;
+          grid-template-columns: 0.58fr 1.42fr;
+          gap: 28px;
+          align-items: start;
+        }
+        .enroll-aside {
+          position: sticky;
+          top: 116px;
+          background: #3b3026;
+          color: #fff;
+          border-radius: 30px;
+          padding: 34px;
+          overflow: hidden;
+        }
+        .enroll-aside::after {
+          content: "";
+          position: absolute;
+          width: 230px;
+          height: 230px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          right: -120px;
+          bottom: -130px;
+        }
+        .enroll-aside img {
+          width: 115px;
+          filter: brightness(0) invert(1);
+          opacity: 0.9;
+        }
+        .enroll-aside h1 {
+          font: 600 3.3rem/0.9 var(--serif);
+          margin: 24px 0 18px;
+        }
+        .enroll-aside p {
+          color: #d6cabf;
+          font-size: 0.88rem;
+        }
+        .privacy-note {
+          border-top: 1px solid rgba(255, 255, 255, 0.14);
+          margin-top: 24px;
+          padding-top: 18px;
+          font-size: 0.74rem;
+          color: #bfb2a6;
+        }
+        .form-card {
+          background: var(--paper);
+          border: 1px solid var(--line);
+          border-radius: 30px;
+          padding: clamp(24px, 5vw, 48px);
+          box-shadow: var(--shadow);
+        }
+        .form-progress {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          gap: 14px;
+          align-items: center;
+          margin-bottom: 35px;
+        }
+        .form-progress strong {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+        }
+        .progress-track {
+          height: 6px;
+          border-radius: 99px;
+          background: var(--ivory-deep);
+          overflow: hidden;
+        }
+        .progress-fill {
+          height: 100%;
+          width: 50%;
+          background: linear-gradient(90deg, var(--olive), var(--saffron));
+          border-radius: 99px;
+        }
+        .form-progress span {
+          font-size: 0.75rem;
+          color: var(--muted);
+        }
+        .selected-plan {
+          display: none;
+          align-items: center;
+          gap: 10px;
+          background: rgba(120, 130, 24, 0.09);
+          border: 1px solid rgba(120, 130, 24, 0.2);
+          padding: 12px 15px;
+          border-radius: 14px;
+          margin-bottom: 24px;
+          font-size: 0.82rem;
+        }
+        .selected-plan.show {
+          display: flex;
+        }
+        .selected-plan strong {
+          text-transform: capitalize;
+          color: var(--olive-deep);
+        }
+        .form-intro h2 {
+          font: 600 clamp(2.4rem, 5vw, 4.4rem)/0.95 var(--serif);
+          margin: 0 0 12px;
+        }
+        .form-intro p {
+          color: var(--muted);
+          margin: 0 0 34px;
+        }
+        .question-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .field {
+          display: grid;
+          gap: 8px;
+        }
+        .field.full {
+          grid-column: 1/-1;
+        }
+        .field label,
+        .field legend {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: #514438;
+        }
+        .field .number {
+          color: var(--saffron);
+          margin-right: 6px;
+        }
+        .required {
+          color: #b25339;
+        }
+        .optional {
+          font-weight: 500;
+          color: #9a8c7f;
+          font-size: 0.7rem;
+        }
+        .field input,
+        .field select,
+        .field textarea {
+          width: 100%;
+          border: 1px solid var(--line);
+          background: #fffdfb;
+          border-radius: 14px;
+          padding: 13px 14px;
+          color: var(--ink);
+          outline: none;
+          transition: 0.2s;
+        }
+        .field textarea {
+          min-height: 116px;
+          resize: vertical;
+        }
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+          border-color: var(--olive);
+          box-shadow: 0 0 0 4px rgba(120, 130, 24, 0.09);
+        }
+        .choice-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .choice-row label {
+          position: relative;
+        }
+        .choice-row input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .choice-row span {
+          display: block;
+          border: 1px solid var(--line);
+          border-radius: 999px;
+          padding: 0.65rem 0.85rem;
+          font-size: 0.75rem;
+          background: #fff;
+          cursor: pointer;
+        }
+        .choice-row input:checked + span {
+          background: var(--ink);
+          border-color: var(--ink);
+          color: #fff;
+        }
+        .consent-box {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          border: 1px solid var(--line);
+          padding: 16px;
+          border-radius: 15px;
+          background: var(--ivory);
+        }
+        .consent-box input {
+          width: 18px;
+          height: 18px;
+          margin-top: 3px;
+        }
+        .consent-box label {
+          font-size: 0.78rem;
+          color: var(--muted);
+        }
+        .form-actions {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          margin-top: 36px;
+          padding-top: 26px;
+          border-top: 1px solid var(--line);
+        }
+        .form-error {
+          display: none;
+          color: #a03f2b;
+          background: #fff0eb;
+          border: 1px solid #efc8bb;
+          padding: 12px 14px;
+          border-radius: 12px;
+          margin-top: 20px;
+          font-size: 0.8rem;
+        }
+        .form-error.show {
+          display: block;
+        }
+        @media (max-width: 920px) {
+          .enroll-shell {
+            grid-template-columns: 1fr;
+          }
+          .enroll-aside {
+            position: static;
+          }
+          .enroll-aside h1 {
+            font-size: 2.7rem;
+          }
+          .enroll-aside img {
+            width: 90px;
+          }
+        }
+        @media (max-width: 650px) {
+          .question-grid {
+            grid-template-columns: 1fr;
+          }
+          .field.full {
+            grid-column: auto;
+          }
+          .form-card {
+            padding: 24px 18px;
+          }
+          .enroll-page {
+            padding-top: 110px;
+          }
+          .form-actions {
+            flex-direction: column-reverse;
+          }
+          .form-actions .btn {
+            width: 100%;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const questions = [
+            {
+              id: "s1_q01",
+              label: "Full legal name",
+              type: "text",
+              required: true,
+              full: true,
+              placeholder: "As it appears on your ID",
+            },
+            {
+              id: "s1_q02",
+              label: "Name you prefer to be called",
+              type: "text",
+              required: true,
+            },
+            {
+              id: "s1_q03",
+              label: "Date of birth",
+              type: "date",
+              required: true,
+            },
+            {
+              id: "s1_q04",
+              label: "Email address",
+              type: "email",
+              required: true,
+            },
+            {
+              id: "s1_q05",
+              label: "Mobile / WhatsApp number",
+              type: "tel",
+              required: true,
+              placeholder: "+91",
+            },
+            {
+              id: "s1_q06",
+              label: "Current city",
+              type: "text",
+              required: true,
+            },
+            {
+              id: "s1_q07",
+              label: "State / Union Territory",
+              type: "text",
+              required: true,
+            },
+            {
+              id: "s1_q08",
+              label: "Current country of residence",
+              type: "text",
+              required: true,
+              value: "India",
+            },
+            {
+              id: "s1_q09",
+              label: "Gender identity",
+              type: "select",
+              required: true,
+              options: [
+                "Woman",
+                "Man",
+                "Non-binary",
+                "Prefer to self-describe",
+                "Prefer not to say",
+              ],
+            },
+            {
+              id: "s1_q10",
+              label: "Pronouns",
+              type: "select",
+              required: false,
+              options: [
+                "She / her",
+                "He / him",
+                "They / them",
+                "Prefer to self-describe",
+                "Prefer not to say",
+              ],
+            },
+            {
+              id: "s1_q11",
+              label: "Current marital status",
+              type: "select",
+              required: true,
+              options: [
+                "Never married",
+                "Divorced",
+                "Widowed",
+                "Legally separated",
+                "Other",
+              ],
+            },
+            {
+              id: "s1_q12",
+              label: "Do you have children?",
+              type: "radio",
+              required: true,
+              options: [
+                "No",
+                "Yes — living with me",
+                "Yes — not living with me",
+                "Prefer to discuss privately",
+              ],
+            },
+            {
+              id: "s1_q13",
+              label: "Please share anything important about your children",
+              type: "textarea",
+              required: false,
+              full: true,
+              placeholder:
+                "Ages, living arrangements, or anything you want your matchmaker to understand",
+            },
+            {
+              id: "s1_q14",
+              label: "Occupation / role",
+              type: "text",
+              required: true,
+            },
+            {
+              id: "s1_q15",
+              label: "Industry or field of work",
+              type: "text",
+              required: true,
+            },
+            {
+              id: "s1_q16",
+              label: "Highest education completed",
+              type: "select",
+              required: true,
+              options: [
+                "School",
+                "Diploma",
+                "Undergraduate degree",
+                "Postgraduate degree",
+                "Doctorate / professional degree",
+                "Other",
+              ],
+            },
+            {
+              id: "s1_q17",
+              label: "Languages you speak comfortably",
+              type: "text",
+              required: true,
+              full: true,
+              placeholder: "Tamil, English, Hindi…",
+            },
+            {
+              id: "s1_q18",
+              label: "Religion or spiritual outlook",
+              type: "text",
+              required: false,
+              placeholder: "Optional",
+            },
+            {
+              id: "s1_q19",
+              label: "Community / caste information",
+              type: "text",
+              required: false,
+              placeholder: "Entirely optional",
+            },
+            {
+              id: "s1_q20",
+              label: "Height",
+              type: "text",
+              required: false,
+              placeholder: "e.g. 168 cm",
+            },
+            {
+              id: "s1_q21",
+              label: "Dietary preference",
+              type: "select",
+              required: true,
+              options: [
+                "Vegetarian",
+                "Vegan",
+                "Eggetarian",
+                "Non-vegetarian",
+                "Jain",
+                "No fixed preference",
+                "Other",
+              ],
+            },
+            {
+              id: "s1_q22",
+              label: "Smoking",
+              type: "radio",
+              required: true,
+              options: [
+                "Never",
+                "Occasionally",
+                "Regularly",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s1_q23",
+              label: "Alcohol",
+              type: "radio",
+              required: true,
+              options: [
+                "Never",
+                "Socially",
+                "Occasionally",
+                "Regularly",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s1_q24",
+              label: "Current living arrangement",
+              type: "select",
+              required: true,
+              options: [
+                "Living independently",
+                "With parents / family",
+                "With children",
+                "Shared accommodation",
+                "Other",
+              ],
+            },
+            {
+              id: "s1_q25",
+              label: "Are you open to relocating?",
+              type: "radio",
+              required: true,
+              options: [
+                "Yes",
+                "Maybe, for the right person",
+                "No",
+                "Prefer to discuss",
+              ],
+            },
+            {
+              id: "s1_q26",
+              label: "What does a typical weekday look like for you?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s1_q27",
+              label: "How do you usually spend your weekends?",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s1_q28",
+              label: "Your hobbies, interests, and communities",
+              type: "textarea",
+              required: true,
+              full: true,
+            },
+            {
+              id: "s1_q29",
+              label: "Why does this feel like the right time to begin?",
+              type: "textarea",
+              required: true,
+              full: true,
+              placeholder: "Share as much or as little as feels comfortable",
+            },
+            {
+              id: "s1_q30",
+              label:
+                "I confirm that I am 25 or older, the information shared is genuine, and Thulir may contact me privately about this enrollment.",
+              type: "consent",
+              required: true,
+              full: true,
+            },
+          ];
+
+          const escapeHtml = (s) =>
+            String(s ?? "").replace(
+              /[&<>"]/g,
+              (m) =>
+                ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[m],
+            );
+          const render = (q) => {
+            const req = q.required
+              ? '<span class="required">*</span>'
+              : ' <span class="optional">optional</span>';
+            const label = `<span class="number">${String(questions.indexOf(q) + 1).padStart(2, "0")}</span>${escapeHtml(q.label)} ${req}`;
+            if (q.type === "consent")
+              return `<div class="field full"><div class="consent-box"><input id="${q.id}" name="${q.id}" type="checkbox" required><label for="${q.id}">${label}</label></div></div>`;
+            if (q.type === "radio")
+              return `<fieldset class="field ${q.full ? "full" : ""}"><legend>${label}</legend><div class="choice-row">${q.options.map((o, i) => `<label><input type="radio" name="${q.id}" value="${escapeHtml(o)}" ${q.required ? "required" : ""}><span>${escapeHtml(o)}</span></label>`).join("")}</div></fieldset>`;
+            let input = "";
+            if (q.type === "select")
+              input = `<select id="${q.id}" name="${q.id}" ${q.required ? "required" : ""}><option value="">Choose an option</option>${q.options.map((o) => `<option>${escapeHtml(o)}</option>`).join("")}</select>`;
+            else if (q.type === "textarea")
+              input = `<textarea id="${q.id}" name="${q.id}" placeholder="${escapeHtml(q.placeholder || "")}" ${q.required ? "required" : ""}></textarea>`;
+            else
+              input = `<input id="${q.id}" name="${q.id}" type="${q.type}" value="${escapeHtml(q.value || "")}" placeholder="${escapeHtml(q.placeholder || "")}" ${q.required ? "required" : ""}>`;
+            return `<div class="field ${q.full ? "full" : ""}"><label for="${q.id}">${label}</label>${input}</div>`;
+          };
+          document.getElementById("step1Questions").innerHTML = questions
+            .map(render)
+            .join("");
+          const params = new URLSearchParams(location.search);
+          const plan = params.get("plan") || "";
+          if (plan) {
+            sessionStorage.setItem("thulirPlan", plan);
+            const box = document.getElementById("selectedPlan");
+            box.classList.add("show");
+            box.querySelector("strong").textContent = plan;
+          } else {
+            sessionStorage.removeItem("thulirPlan");
+          }
+          const saved = JSON.parse(
+            sessionStorage.getItem("thulirStep1") || "{}",
+          );
+          Object.entries(saved).forEach(([k, v]) => {
+            const nodes = document.querySelectorAll(`[name="${k}"]`);
+            nodes.forEach((n) => {
+              if (n.type === "radio" || n.type === "checkbox")
+                n.checked = n.value === v || v === true;
+              else n.value = v;
+            });
+          });
+          document
+            .getElementById("step1Form")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+              const form = e.currentTarget,
+                error = document.getElementById("formError");
+              if (!form.checkValidity()) {
+                form.reportValidity();
+                error.textContent =
+                  "Please complete the required questions before continuing.";
+                error.classList.add("show");
+                return;
+              }
+              const data = {};
+              questions.forEach((q) => {
+                if (q.type === "radio")
+                  data[q.id] =
+                    form.querySelector(`[name="${q.id}"]:checked`)?.value || "";
+                else if (q.type === "consent")
+                  data[q.id] = form.elements[q.id].checked;
+                else data[q.id] = form.elements[q.id].value.trim();
+              });
+              sessionStorage.setItem("thulirStep1", JSON.stringify(data));
+              error.classList.remove("show");
+              location.href = "enroll-step-2.html";
+            });
+        });
+      </script>
+      <section class="enroll-page">
+        <div class="container enroll-shell">
+          <aside class="enroll-aside reveal">
+            <img src="assets/images/thulir-mark.png" alt="Thulir" />
+            <h1>Tell us your story.</h1>
+            <p>
+              This first step helps us understand your background, life, and
+              readiness — without judgment and without rushing you.
+            </p>
+            <div class="privacy-note">
+              Private by design · Consent-first · Reviewed only by the Thulir
+              team
+            </div>
+          </aside>
+          <section class="form-card reveal" aria-labelledby="formTitle">
+            <div class="form-progress">
+              <strong>Step 1 of 2</strong>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+              <span>30 questions</span>
+            </div>
+            <div class="selected-plan" id="selectedPlan">
+              Selected membership: <strong></strong>
+            </div>
+            <div class="form-intro">
+              <h2 id="formTitle">About you</h2>
+              <p>
+                Required questions are marked with *. You may pause and return
+                in this browser before continuing.
+              </p>
+            </div>
+            <form id="step1Form" novalidate>
+              <div class="question-grid" id="step1Questions"></div>
+              <div class="form-error" id="formError" role="alert"></div>
+              <div class="form-actions">
+                <a class="btn btn-soft" href="index.html#membership"
+                  >Back to membership</a
+                ><button class="btn btn-primary btn-arrow" type="submit">
+                  Next page
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/global.js"></script>
+  </body>
+</html>
