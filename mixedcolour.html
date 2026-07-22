@@ -1,0 +1,2985 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Thulir is a human-led, consent-first matchmaking service for meaningful connections across India."
+    />
+    <meta name="theme-color" content="#1D524A" />
+    <title>Thulir · Human-led Matchmaking</title>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+  <body>
+
+<style id="thulir-green-purple-gold-theme">
+:root{
+ --ivory:#F8F7F8;--ivory-deep:#EEE9EE;--paper:#FFFFFF;
+ --ink:#263D38;--muted:#6D7472;--olive:#1D524A;--olive-deep:#153F39;
+ --saffron:#C5A36B;--peach:#D8CED7;--rose:#AC8D8A;
+ --line:rgba(29,82,74,.16);--line-strong:rgba(89,61,75,.28);
+ --shadow-sm:0 14px 35px rgba(35,58,54,.10);
+ --shadow:0 26px 70px rgba(48,54,56,.16)
+}
+body{background:radial-gradient(circle at 8% 7%,rgba(181,167,176,.22),transparent 25%),radial-gradient(circle at 93% 18%,rgba(175,188,187,.22),transparent 28%),#F8F7F8;color:#263D38}
+.site-header,.site-header.scrolled{background:rgba(255,255,255,.95)!important;border-bottom-color:rgba(29,82,74,.12)!important}
+.mobile-panel{background:radial-gradient(circle at 100% 8%,rgba(181,167,176,.28),transparent 30%),linear-gradient(160deg,#fff,#F1EDF2)!important}
+.btn-primary{background:#1D524A!important;border-color:#1D524A!important;color:#fff!important}.btn-primary:hover{background:#153F39!important}
+.btn-soft{background:#fff!important;border-color:rgba(89,61,75,.3)!important;color:#593D4B!important}
+.hero h1 em,.eyebrow,.hero-kicker,.tier,.process-label,.values-title{color:#593D4B!important}
+.hero::after{background:radial-gradient(circle at 14% 22%,rgba(181,167,176,.18),transparent 24%),radial-gradient(circle at 82% 72%,rgba(175,188,187,.18),transparent 28%)!important}
+.hero-quote,.price-card.featured{background:radial-gradient(circle at 95% 5%,rgba(197,163,107,.2),transparent 31%),linear-gradient(145deg,#593D4B,#432D39)!important}
+.founder-card,.site-footer{background:radial-gradient(circle at 92% 8%,rgba(197,163,107,.18),transparent 30%),linear-gradient(145deg,#1D524A,#593D4B)!important}
+.stories-title-card{background:linear-gradient(145deg,#1D524A,#153F39)!important}
+.founder-link,.founder-quote .eyebrow,.stories-title-card .eyebrow,.stories-title-card a,.featured .tier{color:#D9BD83!important}
+.trust-icon,.process-icon,.success-mark{background:rgba(175,188,187,.22)!important;color:#1D524A!important}
+#thlrJourneyChooser{--chooser-paper:#F8F7F8;--chooser-ink:#263D38;--chooser-muted:#6D7472;--chooser-orange:#AC8D8A;--chooser-orange-dark:#80656A;--chooser-green:#1D524A;--chooser-green-dark:#153F39;--chooser-gold:#C5A36B;--chooser-line:rgba(29,82,74,.15);background:radial-gradient(circle at 8% 12%,rgba(181,167,176,.22),transparent 25%),radial-gradient(circle at 92% 88%,rgba(175,188,187,.24),transparent 27%),#F8F7F8!important}
+#thlrJourneyChooser .thlr-choice-card-single{background:linear-gradient(145deg,#AC8D8A,#80656A)!important}
+#thlrJourneyChooser .thlr-choice-card-again{background:linear-gradient(145deg,#1D524A,#153F39)!important}
+.about-copy-card,.about-meaning,.value-card,.support-level,.faq-item,.price-card{background:rgba(255,255,255,.84)!important}
+.about-care{border-left-color:#C5A36B!important;background:linear-gradient(90deg,rgba(197,163,107,.14),transparent)!important}
+.value-card:nth-child(1) span{color:#1D524A!important}.value-card:nth-child(2) span{color:#593D4B!important}.value-card:nth-child(3) span{color:#C5A36B!important}.value-card:nth-child(4) span{color:#AC8D8A!important}
+.manifesto-piece:nth-child(1){background:#EEEAEF!important}.manifesto-piece:nth-child(2){background:#EDF2F1!important}.manifesto-piece:nth-child(3){background:linear-gradient(145deg,#1D524A,#153F39)!important;border-color:#1D524A!important}
+.support-level.is-active{background:linear-gradient(145deg,#fff,rgba(175,188,187,.15))!important;border-color:rgba(29,82,74,.42)!important}.support-level.is-active .support-plus{background:#1D524A!important}
+.membership{background:linear-gradient(180deg,#E9EDEF,#F1EDF2 48%,#fff)!important}
+.price-card:nth-child(1){background:linear-gradient(155deg,#fff,rgba(181,167,176,.18))!important}.price-card:nth-child(3){background:linear-gradient(155deg,#fff,rgba(175,188,187,.22))!important}
+.faq-chip[aria-selected=true],.faq-chip:hover{background:#593D4B!important;border-color:#593D4B!important;color:#fff!important}
+.site-footer,.site-footer a,.site-footer span,.site-footer p{color:rgba(255,255,255,.82)}.site-footer h2,.site-footer strong{color:#fff}.footer-tagline,.footer-brand .tamil{color:#D9BD83!important}
+</style>
+
+
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="Thulir home">
+          <img src="assets/images/thulir-mark.png" alt="" />
+          <span class="brand-word"
+            ><strong>Thulir</strong><span>துளிர்</span></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Desktop navigation">
+          <a class="active" href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="process.html">Full process</a>
+          <a href="#membership">Membership</a>
+          <a href="#faq">FAQ</a>
+          <a href="founder-story.html">Our story</a>
+          <a class="btn btn-primary nav-cta" href="#thlrJourneyChooser"
+            >Begin journey</a
+          >
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <aside class="mobile-panel" aria-label="Mobile navigation">
+        <div class="mobile-panel-head">
+          <a class="brand" href="index.html"
+            ><img src="assets/images/thulir-mark.png" alt="" /><span
+              class="brand-word"
+              ><strong>Thulir</strong><span>துளிர்</span></span
+            ></a
+          >
+          <button class="mobile-close" aria-label="Close menu">Close</button>
+        </div>
+        <nav class="mobile-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Thulir</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="process.html">Full process</a>
+          <a href="#membership">Membership</a>
+          <a href="#faq">FAQ</a>
+          <a href="founder-story.html">Founder’s story</a>
+        </nav>
+        <a class="btn btn-primary" href="#thlrJourneyChooser">Begin your journey</a>
+        <p class="mobile-caption">Human-led · Verified · Consent-first</p>
+      </aside>
+    </div>
+
+    <main id="main">
+      <!-- SECTION 01 — HERO | Section-local CSS + JS -->
+      <style>
+        .hero {
+          position: relative;
+          padding: 126px 0 28px;
+          overflow: hidden;
+        }
+        .hero::before {
+          content: "";
+          position: absolute;
+          width: 600px;
+          height: 600px;
+          border: 1px solid rgba(89, 96, 19, 0.13);
+          border-radius: 50%;
+          right: -260px;
+          top: -190px;
+          pointer-events: none;
+        }
+        .hero::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(
+              circle at 14% 22%,
+              rgba(74, 223, 60, 0.1),
+              transparent 23%
+            ),
+            radial-gradient(
+              circle at 82% 72%,
+              rgba(127, 136, 31, 0.11),
+              transparent 27%
+            );
+          pointer-events: none;
+        }
+        .hero-grid {
+          min-height: 570px;
+          display: grid;
+          grid-template-columns: 1.02fr 0.98fr;
+          gap: 58px;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+        }
+        .hero-copy {
+          padding: 38px 0;
+        }
+        .hero-kicker {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: var(--olive-deep);
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+        }
+        .hero-kicker i {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: var(--saffron);
+          box-shadow:
+            18px 0 0 rgba(223, 129, 60, 0.45),
+            36px 0 0 rgba(223, 129, 60, 0.18);
+          margin-right: 32px;
+        }
+        .hero h1 {
+          font: 600 clamp(4rem, 7vw, 7.5rem)/0.79 var(--serif);
+          letter-spacing: -0.06em;
+          margin: 22px 0 24px;
+          max-width: 730px;
+        }
+        .hero h1 em {
+          display: block;
+          color: var(--olive-deep);
+          font-weight: 500;
+        }
+        .hero-lead {
+          font-size: clamp(1rem, 1.35vw, 1.17rem);
+          max-width: 660px;
+          color: var(--muted);
+          line-height: 1.78;
+        }
+        .hero-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-top: 30px;
+        }
+        .hero-visual {
+          height: 500px;
+          position: relative;
+          isolation: isolate;
+        }
+        .hero-photo {
+          height: 100%;
+          width: 92%;
+          margin-left: auto;
+          border-radius: 48% 48% 24px 24px;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+          border: 8px solid rgba(255, 255, 255, 0.62);
+          position: relative;
+          background: #e9dfd4;
+        }
+        .hero-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 38%;
+          transition: transform 1.2s ease;
+        }
+        .hero-photo::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            180deg,
+            transparent 52%,
+            rgba(40, 31, 24, 0.3)
+          );
+          pointer-events: none;
+        }
+        .hero-visual:hover .hero-photo img {
+          transform: scale(1.035);
+        }
+        .hero-seal {
+          position: absolute;
+          left: -6px;
+          bottom: 38px;
+          width: 168px;
+          height: 168px;
+          border-radius: 50%;
+          background: rgba(255, 253, 248, 0.94);
+          border: 1px solid var(--line);
+          box-shadow: var(--shadow-sm);
+          display: grid;
+          place-items: center;
+          text-align: center;
+          padding: 24px;
+          z-index: 2;
+        }
+        .hero-seal img {
+          width: 58px;
+          height: 68px;
+          object-fit: contain;
+          margin: auto;
+        }
+        .hero-seal strong {
+          display: block;
+          font: 600 1.18rem var(--serif);
+          line-height: 1;
+          color: var(--ink);
+          margin-top: 4px;
+        }
+        .hero-seal span {
+          font-size: 0.62rem;
+          color: var(--muted);
+          line-height: 1.35;
+        }
+        .hero-quote {
+          position: absolute;
+          right: 8px;
+          top: 26px;
+          background: rgba(57, 47, 39, 0.92);
+          color: #fff;
+          padding: 17px 20px;
+          border-radius: 18px;
+          z-index: 2;
+          max-width: 205px;
+          box-shadow: 0 18px 38px rgba(41, 31, 24, 0.18);
+        }
+        .hero-quote strong {
+          font: italic 1.2rem/1.15 var(--serif);
+          display: block;
+        }
+        .hero-quote small {
+          color: #d8cabd;
+          font-size: 0.64rem;
+        }
+        .trust-strip {
+          position: relative;
+          z-index: 2;
+          width: var(--container);
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          background: rgba(255, 253, 248, 0.75);
+          border: 1px solid var(--line);
+          border-radius: 22px;
+          box-shadow: var(--shadow-sm);
+          overflow: hidden;
+          backdrop-filter: blur(14px);
+        }
+        .trust-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 17px 18px;
+          font-size: 0.76rem;
+          font-weight: 700;
+          border-right: 1px solid var(--line);
+        }
+        .trust-item:last-child {
+          border-right: 0;
+        }
+        .trust-icon {
+          width: 34px;
+          height: 34px;
+          flex: 0 0 34px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background: rgba(127, 136, 31, 0.1);
+          color: var(--olive-deep);
+          font-size: 0.95rem;
+        }
+        @media (max-width: 980px) {
+          .hero {
+            padding-top: 112px;
+          }
+          .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+          .hero-copy {
+            padding-bottom: 10px;
+          }
+          .hero-visual {
+            height: 460px;
+            max-width: 680px;
+            width: 100%;
+            margin: auto;
+          }
+          .hero-photo {
+            width: 88%;
+          }
+          .trust-strip {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .trust-item:nth-child(2) {
+            border-right: 0;
+          }
+          .trust-item:nth-child(-n + 2) {
+            border-bottom: 1px solid var(--line);
+          }
+        }
+        @media (max-width: 620px) {
+          .hero {
+            padding: 96px 0 20px;
+          }
+          .hero-grid {
+            min-height: auto;
+          }
+          .hero-copy {
+            padding: 24px 0 12px;
+          }
+          .hero h1 {
+            font-size: clamp(3.35rem, 17vw, 5rem);
+            margin-top: 18px;
+          }
+          .hero-lead {
+            font-size: 0.96rem;
+          }
+          .hero-actions {
+            margin-top: 24px;
+          }
+          .hero-actions .btn {
+            width: 100%;
+          }
+          .hero-visual {
+            height: 370px;
+            margin-top: 16px;
+          }
+          .hero-photo {
+            width: 94%;
+            border-width: 5px;
+            border-radius: 42% 42% 20px 20px;
+          }
+          .hero-seal {
+            width: 122px;
+            height: 122px;
+            padding: 16px;
+            left: 0;
+            bottom: 20px;
+          }
+          .hero-seal img {
+            width: 40px;
+            height: 46px;
+          }
+          .hero-seal strong {
+            font-size: 1rem;
+          }
+          .hero-seal span {
+            font-size: 0.54rem;
+          }
+          .hero-quote {
+            right: 0;
+            top: 14px;
+            padding: 12px 14px;
+            max-width: 160px;
+          }
+          .hero-quote strong {
+            font-size: 1rem;
+          }
+          .trust-strip {
+            grid-template-columns: 1fr;
+            border-radius: 18px;
+          }
+          .trust-item {
+            border-right: 0;
+            border-bottom: 1px solid var(--line);
+            padding: 14px 16px;
+          }
+          .trust-item:nth-child(2) {
+            border-right: 0;
+          }
+          .trust-item:last-child {
+            border-bottom: 0;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const photo = document.querySelector(".hero-photo");
+          if (
+            !photo ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          )
+            return;
+          document
+            .querySelector(".hero-visual")
+            ?.addEventListener("pointermove", (event) => {
+              const rect = event.currentTarget.getBoundingClientRect();
+              const x = (event.clientX - rect.left) / rect.width - 0.5;
+              const y = (event.clientY - rect.top) / rect.height - 0.5;
+              photo.style.transform = `translate(${x * 7}px,${y * 7}px) rotate(${x * 0.45}deg)`;
+            });
+          document
+            .querySelector(".hero-visual")
+            ?.addEventListener(
+              "pointerleave",
+              () => (photo.style.transform = ""),
+            );
+        });
+      </script>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="hero-kicker"><i></i>Human-led matchmaking</div>
+            <h1>Love in Full <em>Bloom Again.</em></h1>
+            <p class="hero-lead">
+              Your next chapter deserves a beautiful beginning. Thulir is a
+              human-led matchmaking service for singles ready to find meaningful
+              connection — thoughtfully, at their own pace, with someone
+              genuinely in their corner.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-arrow" href="#thlrJourneyChooser"
+                >Begin your journey</a
+              >
+              <a class="btn btn-soft" href="#how-it-works">How it works</a>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <figure class="hero-photo">
+              <img
+                src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+                alt="A couple sharing a quiet, meaningful moment"
+                loading="eager"
+              />
+            </figure>
+            <div class="hero-seal">
+              <div>
+                <img src="assets/images/thulir-mark.png" alt="" /><strong
+                  >Begin again.</strong
+                ><span>Thoughtfully. At your pace.</span>
+              </div>
+            </div>
+            <div class="hero-quote">
+              <strong>“A beautiful beginning, handled with care.”</strong
+              ><small>Thulir · Chennai</small>
+            </div>
+          </div>
+        </div>
+        <div class="trust-strip reveal" aria-label="Thulir trust commitments">
+          <div class="trust-item">
+            <span class="trust-icon">✦</span>100% Human-led
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>Verified Profiles
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">⌖</span>Pan-India Introductions
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">♡</span>Consent-first Always
+          </div>
+        </div>
+      </section>
+
+
+      <!-- JOURNEY TYPE SELECTOR | Unique inline CSS + JS -->
+      <style>
+        #thlrJourneyChooser,
+        #thlrJourneyChooser *,
+        #thlrJourneyChooser *::before,
+        #thlrJourneyChooser *::after {
+          box-sizing: border-box;
+        }
+
+        #thlrJourneyChooser {
+          --chooser-paper: #fffaf2;
+          --chooser-ink: #20362f;
+          --chooser-muted: #66766e;
+          --chooser-orange: #cf7d5b;
+          --chooser-orange-dark: #b96342;
+          --chooser-green: #84966b;
+          --chooser-green-dark: #657b4f;
+          --chooser-gold: #ad8951;
+          --chooser-line: rgba(64, 91, 22, 0.15);
+
+          position: relative;
+          isolation: isolate;
+          width: 100%;
+          max-width: 100%;
+          padding: 104px 0;
+          overflow: hidden;
+          background:
+            radial-gradient(
+              circle at 8% 12%,
+              rgba(245, 138, 60, 0.09),
+              transparent 24%
+            ),
+            radial-gradient(
+              circle at 92% 88%,
+              rgba(117, 138, 32, 0.09),
+              transparent 26%
+            ),
+            var(--chooser-paper);
+          border-block: 1px solid var(--chooser-line);
+        }
+
+        #thlrJourneyChooser::before {
+          content: "";
+          position: absolute;
+          top: -260px;
+          right: -260px;
+          width: 520px;
+          height: 520px;
+          border: 1px solid rgba(117, 138, 32, 0.11);
+          border-radius: 50%;
+          pointer-events: none;
+        }
+
+        #thlrJourneyChooser .thlr-choice-wrap {
+          width: min(1000px, calc(100% - 40px));
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        #thlrJourneyChooser .thlr-choice-tamil {
+          display: block;
+          margin-bottom: 12px;
+          color: var(--chooser-gold);
+          font: 600 1.45rem/1.2 var(--tamil, serif);
+        }
+
+        #thlrJourneyChooser .thlr-choice-title {
+          max-width: 900px;
+          margin: 0 auto;
+          color: var(--chooser-ink);
+          font: 600 clamp(3rem, 6.2vw, 5.7rem) / 0.95
+            var(--serif, Georgia, serif);
+          letter-spacing: -0.045em;
+          text-wrap: balance;
+        }
+
+        #thlrJourneyChooser .thlr-choice-copy {
+          max-width: 750px;
+          margin: 24px auto 0;
+          color: var(--chooser-muted);
+          font-size: clamp(1rem, 1.55vw, 1.25rem);
+          font-weight: 600;
+          line-height: 1.65;
+          text-wrap: balance;
+        }
+
+        #thlrJourneyChooser .thlr-choice-sprout {
+          position: relative;
+          width: 120px;
+          height: 90px;
+          margin: 42px auto 38px;
+        }
+
+        #thlrJourneyChooser .thlr-choice-stem {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 4px;
+          height: 52px;
+          border-radius: 999px;
+          background: var(--chooser-gold);
+          transform: translateX(-50%);
+        }
+
+        #thlrJourneyChooser .thlr-choice-branch-left,
+        #thlrJourneyChooser .thlr-choice-branch-right {
+          position: absolute;
+          top: 18px;
+          width: 55px;
+          height: 38px;
+          border-top: 4px solid var(--chooser-gold);
+        }
+
+        #thlrJourneyChooser .thlr-choice-branch-left {
+          left: 8px;
+          border-radius: 0 44px 0 0;
+          transform: rotate(20deg);
+        }
+
+        #thlrJourneyChooser .thlr-choice-branch-right {
+          right: 8px;
+          border-radius: 44px 0 0 0;
+          transform: rotate(-20deg);
+        }
+
+        #thlrJourneyChooser .thlr-choice-leaf-left,
+        #thlrJourneyChooser .thlr-choice-leaf-right {
+          position: absolute;
+          top: 6px;
+          width: 28px;
+          height: 18px;
+          border-radius: 70% 30% 70% 30%;
+        }
+
+        #thlrJourneyChooser .thlr-choice-leaf-left {
+          left: 3px;
+          background: var(--chooser-orange);
+          transform: rotate(-12deg);
+        }
+
+        #thlrJourneyChooser .thlr-choice-leaf-right {
+          right: 3px;
+          background: var(--chooser-green);
+          transform: rotate(12deg) scaleX(-1);
+        }
+
+        #thlrJourneyChooser .thlr-choice-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 28px;
+          width: min(840px, 100%);
+          margin: 0 auto;
+        }
+
+        #thlrJourneyChooser .thlr-choice-card {
+          position: relative;
+          display: grid;
+          place-items: center;
+          min-width: 0;
+          min-height: 108px;
+          padding: 19px 22px;
+          overflow: hidden;
+          border: 0;
+          border-radius: 22px;
+          color: #fff;
+          text-decoration: none;
+          box-shadow: 0 20px 48px rgba(42, 55, 45, 0.13);
+          transition:
+            transform 0.28s ease,
+            box-shadow 0.28s ease,
+            filter 0.28s ease;
+        }
+
+        #thlrJourneyChooser .thlr-choice-card::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(
+              circle at 90% 10%,
+              rgba(255, 255, 255, 0.18),
+              transparent 32%
+            );
+          pointer-events: none;
+        }
+
+        #thlrJourneyChooser .thlr-choice-card:hover,
+        #thlrJourneyChooser .thlr-choice-card:focus-visible {
+          transform: translateY(-8px);
+          box-shadow: 0 28px 65px rgba(42, 55, 45, 0.2);
+          filter: saturate(1.08);
+        }
+
+        #thlrJourneyChooser .thlr-choice-card:focus-visible {
+          outline: 4px solid rgba(245, 138, 60, 0.27);
+          outline-offset: 5px;
+        }
+
+        #thlrJourneyChooser .thlr-choice-card-single {
+          background: linear-gradient(
+            145deg,
+            var(--chooser-orange),
+            var(--chooser-orange-dark)
+          );
+        }
+
+        #thlrJourneyChooser .thlr-choice-card-again {
+          background: linear-gradient(
+            145deg,
+            var(--chooser-green),
+            var(--chooser-green-dark)
+          );
+        }
+
+        #thlrJourneyChooser .thlr-choice-card-content {
+          position: relative;
+          z-index: 1;
+        }
+
+        #thlrJourneyChooser .thlr-choice-card strong {
+          display: block;
+          color: #fff;
+          font: 600 clamp(1.65rem, 3vw, 2.25rem) / 1
+            var(--serif, Georgia, serif);
+        }
+
+        #thlrJourneyChooser .thlr-choice-card span {
+          display: block;
+          margin-top: 5px;
+          color: rgba(255, 255, 255, 0.88);
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+
+        #thlrJourneyChooser .thlr-choice-note {
+          max-width: 700px;
+          margin: 24px auto 0;
+          color: var(--chooser-muted);
+          font-size: 0.78rem;
+          line-height: 1.65;
+        }
+
+        @media (max-width: 700px) {
+          #thlrJourneyChooser {
+            padding: 82px 0;
+          }
+
+          #thlrJourneyChooser .thlr-choice-wrap {
+            width: calc(100% - 26px);
+          }
+
+          #thlrJourneyChooser .thlr-choice-title {
+            font-size: clamp(2.85rem, 14vw, 4.2rem);
+          }
+
+          #thlrJourneyChooser .thlr-choice-copy {
+            margin-top: 19px;
+            font-size: 0.98rem;
+          }
+
+          #thlrJourneyChooser .thlr-choice-sprout {
+            margin-top: 34px;
+            margin-bottom: 30px;
+          }
+
+          #thlrJourneyChooser .thlr-choice-grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+          }
+
+          #thlrJourneyChooser .thlr-choice-card {
+            min-height: 96px;
+            padding: 17px 16px;
+            border-radius: 20px;
+          }
+        }
+      </style>
+
+      <section
+        id="thlrJourneyChooser"
+        aria-labelledby="thlrJourneyChooserTitle"
+      >
+        <div class="thlr-choice-wrap">
+          <span class="thlr-choice-tamil">துளிர்</span>
+
+          <h2 class="thlr-choice-title" id="thlrJourneyChooserTitle">
+            Love in full bloom again
+          </h2>
+
+          <p class="thlr-choice-copy">
+            A human matchmaker, not an app. Every match handpicked, every story
+            heard before it is matched.
+          </p>
+
+          <div class="thlr-choice-sprout" aria-hidden="true">
+            <span class="thlr-choice-stem"></span>
+            <span class="thlr-choice-branch-left"></span>
+            <span class="thlr-choice-branch-right"></span>
+            <span class="thlr-choice-leaf-left"></span>
+            <span class="thlr-choice-leaf-right"></span>
+          </div>
+
+          <div class="thlr-choice-grid">
+            <a
+              class="thlr-choice-card thlr-choice-card-single"
+              href="enroll-singles.html"
+              data-thlr-journey="single"
+            >
+              <span class="thlr-choice-card-content">
+                <strong>Starting fresh</strong>
+                <span>Never married</span>
+              </span>
+            </a>
+
+            <a
+              class="thlr-choice-card thlr-choice-card-again"
+              href="enroll-divorced-widowed.html"
+              data-thlr-journey="second-chapter"
+            >
+              <span class="thlr-choice-card-content">
+                <strong>Beginning again</strong>
+                <span>Divorced or widowed</span>
+              </span>
+            </a>
+          </div>
+
+          <p class="thlr-choice-note">
+            Your selection only changes the questions shown to you. Every
+            response remains private, consent-led, and reviewed by the Thulir
+            team.
+          </p>
+        </div>
+      </section>
+
+      <script>
+        (() => {
+          "use strict";
+
+          const chooser = document.getElementById("thlrJourneyChooser");
+          if (!chooser || chooser.dataset.ready === "true") return;
+          chooser.dataset.ready = "true";
+
+          const planLinks = document.querySelectorAll("[data-thlr-plan]");
+          const generalJourneyLinks = document.querySelectorAll(
+            'a[href="#choose-path"], a[href="#thlrJourneyChooser"]',
+          );
+          const journeyCards = chooser.querySelectorAll("[data-thlr-journey]");
+
+          planLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              const plan = link.dataset.thlrPlan || "";
+              if (plan) sessionStorage.setItem("thulirPlan", plan);
+            });
+          });
+
+          generalJourneyLinks.forEach((link) => {
+            if (link.hasAttribute("data-thlr-plan")) return;
+
+            link.addEventListener("click", () => {
+              sessionStorage.removeItem("thulirPlan");
+            });
+          });
+
+          journeyCards.forEach((card) => {
+            card.addEventListener("click", (event) => {
+              event.preventDefault();
+
+              const journey = card.dataset.thlrJourney || "";
+              const baseUrl = card.getAttribute("href");
+              const plan = sessionStorage.getItem("thulirPlan") || "";
+
+              sessionStorage.setItem("thulirJourneyType", journey);
+
+              const destination = new URL(baseUrl, window.location.href);
+
+              if (plan) {
+                destination.searchParams.set("plan", plan);
+              }
+
+              window.location.href =
+                destination.pathname +
+                destination.search +
+                destination.hash;
+            });
+          });
+        })();
+      </script>
+
+      <!-- SECTION 02 — ABOUT THULIR | Section-local CSS -->
+      <style>
+        .about {
+          padding: 118px 0;
+          position: relative;
+        }
+        .about-intro {
+          display: grid;
+          grid-template-columns: 0.95fr 1.05fr;
+          gap: 70px;
+          align-items: start;
+          margin-bottom: 52px;
+        }
+        .about-heading {
+          position: sticky;
+          top: 120px;
+        }
+        .about-heading .section-title {
+          max-width: 620px;
+        }
+        .about-visual {
+          position: relative;
+          min-height: 520px;
+        }
+        .about-image {
+          height: 500px;
+          width: 88%;
+          margin-left: auto;
+          border-radius: 30px 30px 46% 30px;
+          overflow: hidden;
+          border: 1px solid var(--line);
+          box-shadow: var(--shadow);
+          background: #e8ded4;
+        }
+        .about-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: transform 0.8s ease;
+        }
+        .about-image:hover img {
+          transform: scale(1.035);
+        }
+        .about-meaning {
+          position: absolute;
+          left: 0;
+          bottom: 28px;
+          width: 255px;
+          background: rgba(255, 253, 248, 0.96);
+          border: 1px solid var(--line);
+          border-radius: 24px;
+          padding: 24px;
+          box-shadow: var(--shadow-sm);
+        }
+        .about-meaning strong {
+          display: block;
+          font: 600 2rem/1 var(--serif);
+          color: var(--olive-deep);
+        }
+        .about-meaning span {
+          font-size: 0.78rem;
+          color: var(--muted);
+        }
+        .about-copy-card {
+          background: rgba(255, 255, 255, 0.62);
+          border: 1px solid var(--line);
+          padding: clamp(30px, 5vw, 58px);
+          border-radius: 32px;
+          box-shadow: 0 20px 55px rgba(58, 42, 29, 0.07);
+          position: relative;
+          overflow: hidden;
+        }
+        .about-copy-card::before {
+          content: "02";
+          position: absolute;
+          right: 26px;
+          top: 6px;
+          font: 600 7rem var(--serif);
+          color: rgba(127, 136, 31, 0.07);
+        }
+        .about-copy-card .lead {
+          font: 600 clamp(1.8rem, 3vw, 2.75rem)/1.14 var(--serif);
+          color: #4a3d32;
+          margin: 0 0 24px;
+          max-width: 900px;
+        }
+        .about-copy-card p {
+          color: var(--muted);
+          margin: 0 0 18px;
+          max-width: 970px;
+        }
+        .about-care {
+          margin: 28px 0 8px;
+          padding: 23px 25px;
+          border-left: 3px solid var(--saffron);
+          background: linear-gradient(
+            90deg,
+            rgba(223, 129, 60, 0.09),
+            transparent
+          );
+          font: 600 clamp(1.55rem, 2.5vw, 2.25rem)/1.15 var(--serif);
+          color: var(--ink);
+        }
+        .values-title {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin: 48px 0 20px;
+          font-size: 0.7rem;
+          letter-spacing: 0.19em;
+          text-transform: uppercase;
+          color: var(--olive-deep);
+          font-weight: 700;
+        }
+        .values-title::after {
+          content: "";
+          height: 1px;
+          flex: 1;
+          background: var(--line);
+        }
+        .values {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 14px;
+        }
+        .value-card {
+          padding: 25px;
+          border: 1px solid var(--line);
+          border-radius: 22px;
+          background: var(--paper);
+          transition: 0.3s;
+          position: relative;
+          overflow: hidden;
+        }
+        .value-card::after {
+          content: "";
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: rgba(127, 136, 31, 0.06);
+          right: -34px;
+          bottom: -34px;
+          transition: 0.35s;
+        }
+        .value-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(127, 136, 31, 0.45);
+          box-shadow: var(--shadow-sm);
+        }
+        .value-card:hover::after {
+          transform: scale(2.2);
+        }
+        .value-card span {
+          font: 600 2.5rem var(--serif);
+          color: var(--saffron);
+        }
+        .value-card h3 {
+          font: 600 1.5rem var(--serif);
+          margin: 0.2rem 0 0.5rem;
+        }
+        .value-card p {
+          font-size: 0.86rem;
+          margin: 0;
+          position: relative;
+          z-index: 1;
+        }
+        @media (max-width: 900px) {
+          .about-intro {
+            grid-template-columns: 1fr;
+            gap: 32px;
+          }
+          .about-heading {
+            position: static;
+          }
+          .about-visual {
+            min-height: 430px;
+            max-width: 680px;
+          }
+          .about-image {
+            height: 420px;
+          }
+          .about-copy-card {
+            margin-top: 0;
+          }
+        }
+        @media (max-width: 620px) {
+          .about {
+            padding: 86px 0;
+          }
+          .about-intro {
+            margin-bottom: 28px;
+          }
+          .about-visual {
+            min-height: 350px;
+          }
+          .about-image {
+            height: 340px;
+            width: 94%;
+            border-radius: 24px 24px 42% 24px;
+          }
+          .about-meaning {
+            width: 210px;
+            padding: 18px;
+            bottom: 8px;
+          }
+          .about-copy-card {
+            padding: 26px 20px;
+            border-radius: 24px;
+          }
+          .about-copy-card .lead {
+            font-size: 1.75rem;
+          }
+          .values {
+            grid-template-columns: 1fr;
+          }
+          .value-card {
+            padding: 21px;
+          }
+          .about-care {
+            padding: 18px 18px;
+            font-size: 1.5rem;
+          }
+        }
+      </style>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-intro">
+            <div class="about-heading reveal">
+              <span class="eyebrow">SECTION 02 — ABOUT THULIR</span>
+              <h2 class="section-title">
+                We believe beginning again is not a compromise — it is an act of
+                courage.
+              </h2>
+              <p class="section-copy">
+                A place where your story is heard before your profile is ever
+                introduced.
+              </p>
+            </div>
+            <div class="about-visual reveal">
+              <figure class="about-image">
+                <img
+                  src="https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
+                  alt="A thoughtful private conversation"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="about-meaning">
+                <strong>Thulir · துளிர்</strong
+                ><span
+                  >A tender new shoot — the first sign of growth after
+                  stillness.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="about-copy-card reveal">
+            <p class="lead">
+              Thulir — meaning a tender new shoot, the first sign of growth
+              after stillness — was built on a simple belief: that every person
+              deserves a second chance at love, and that finding it should feel
+              dignified, safe, and deeply personal.
+            </p>
+            <p>
+              Thulir is built especially for those who have loved and lost —
+              divorced or widowed adults ready to begin again. Singles who have
+              not yet found the right person are welcome here too.
+            </p>
+            <p>
+              There is no rush, no judgment, and no algorithm deciding your
+              future.
+            </p>
+            <p>
+              At Thulir, a real person — your dedicated matchmaker — listens to
+              your story, understands what matters to you, and works with quiet
+              intention to find a connection that feels natural, genuine, and
+              lasting.
+            </p>
+            <div class="about-care">
+              This is not matchmaking as a transaction. This is matchmaking as
+              care.
+            </div>
+            <div class="values-title">Our Values</div>
+            <div class="values">
+              <article class="value-card">
+                <span>01</span>
+                <h3>Dignity above all</h3>
+                <p>
+                  Every member is treated with the respect and sensitivity their
+                  journey deserves. Always.
+                </p>
+              </article>
+              <article class="value-card">
+                <span>02</span>
+                <h3>Intention over volume</h3>
+                <p>
+                  We would rather make three meaningful introductions than
+                  thirty careless ones.
+                </p>
+              </article>
+              <article class="value-card">
+                <span>03</span>
+                <h3>Consent at every step</h3>
+                <p>
+                  No detail is shared, no introduction made, without the full
+                  knowledge and agreement of both people.
+                </p>
+              </article>
+              <article class="value-card">
+                <span>04</span>
+                <h3>Unhurried by design</h3>
+                <p>
+                  Connection cannot be rushed. We move at your pace — and we
+                  stay with you for as long as it takes.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03 — FOUNDER'S NOTE | Section-local CSS -->
+      <style>
+        .founder-note {
+          padding: 0 0 105px;
+        }
+        .founder-card {
+          max-width: 1040px;
+          margin: auto;
+          background: #352c24;
+          color: #fff;
+          border-radius: 30px;
+          padding: 28px;
+          display: grid;
+          grid-template-columns: 255px 1fr;
+          gap: 34px;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 26px 65px rgba(48, 36, 27, 0.18);
+        }
+        .founder-card::after {
+          content: "";
+          position: absolute;
+          width: 260px;
+          height: 260px;
+          border: 1px solid rgba(255, 255, 255, 0.09);
+          border-radius: 50%;
+          right: -130px;
+          top: -150px;
+        }
+        .founder-mini-image {
+          height: 260px;
+          border-radius: 22px;
+          overflow: hidden;
+          background: #69584a;
+          position: relative;
+        }
+        .founder-mini-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: saturate(0.75) sepia(0.12);
+        }
+        .founder-mini-image::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            180deg,
+            transparent,
+            rgba(40, 30, 23, 0.3)
+          );
+        }
+        .founder-quote {
+          padding: 6px 26px 6px 0;
+          position: relative;
+          z-index: 1;
+        }
+        .founder-quote .eyebrow {
+          color: #efb789;
+        }
+        .founder-quote blockquote {
+          font: 500 clamp(1.5rem, 2.6vw, 2.45rem)/1.22 var(--serif);
+          margin: 13px 0;
+          color: #fffaf4;
+        }
+        .founder-quote cite {
+          font-style: normal;
+          color: #d9cabd;
+          font-size: 0.72rem;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+        }
+        .founder-link {
+          display: inline-flex;
+          margin-top: 17px;
+          color: #f0ad76;
+          font-weight: 700;
+          font-size: 0.82rem;
+        }
+        @media (max-width: 760px) {
+          .founder-note {
+            padding-bottom: 82px;
+          }
+          .founder-card {
+            grid-template-columns: 1fr;
+            padding: 18px;
+            gap: 22px;
+          }
+          .founder-mini-image {
+            height: 230px;
+          }
+          .founder-quote {
+            padding: 0 8px 10px;
+          }
+          .founder-quote blockquote {
+            font-size: 1.55rem;
+          }
+        }
+      </style>
+      <section class="founder-note" aria-labelledby="founder-note-title">
+        <div class="container">
+          <div class="founder-card reveal">
+            <figure class="founder-mini-image">
+              <img
+                src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+                alt="Editorial placeholder representing the Thulir founder"
+                loading="lazy"
+              />
+            </figure>
+            <div class="founder-quote">
+              <span class="eyebrow">SECTION 03 — FOUNDER'S NOTE</span>
+              <blockquote id="founder-note-title">
+                “I started Thulir because I believe finding a partner — the
+                first time, or after loss — can be dignified, intentional, and
+                free of the noise. This is my attempt to change how
+                relationships begin in India: with less interference, more
+                self-knowledge, and real human care guiding the way.”
+              </blockquote>
+              <cite>— Founder, Thulir</cite><br />
+              <a class="founder-link" href="founder-story.html"
+                >Read the founder’s story ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 04 — HOW IT WORKS | Section-local CSS + JS -->
+      <style>
+        .how {
+          padding: 112px 0;
+          background: var(--paper);
+          border-block: 1px solid var(--line);
+          position: relative;
+          overflow: hidden;
+        }
+        .how::before {
+          content: "";
+          position: absolute;
+          width: 520px;
+          height: 520px;
+          border-radius: 50%;
+          border: 1px solid rgba(127, 136, 31, 0.11);
+          left: -310px;
+          top: 120px;
+        }
+        .how-head {
+          display: grid;
+          grid-template-columns: 1fr 0.95fr;
+          gap: 55px;
+          align-items: end;
+          margin-bottom: 36px;
+          position: relative;
+          z-index: 1;
+        }
+        .how-manifesto {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 9px;
+        }
+        .manifesto-piece {
+          border: 1px solid var(--line);
+          background: var(--ivory);
+          border-radius: 18px;
+          padding: 16px;
+          font: 600 1.18rem/1.05 var(--serif);
+          min-height: 78px;
+          display: flex;
+          align-items: center;
+          transition: 0.25s;
+        }
+        .manifesto-piece:last-child {
+          background: var(--ink);
+          color: #fff;
+          border-color: var(--ink);
+        }
+        .manifesto-piece:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-sm);
+        }
+        .process-rail {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 14px;
+          position: relative;
+          z-index: 1;
+        }
+        .process-card {
+          grid-column: span 2;
+          position: relative;
+          background: var(--ivory);
+          border: 1px solid var(--line);
+          border-radius: 26px;
+          padding: 27px;
+          min-height: 330px;
+          transition:
+            transform 0.32s ease,
+            box-shadow 0.32s ease,
+            border-color 0.32s ease,
+            background 0.32s ease;
+          overflow: hidden;
+        }
+        .process-card:nth-child(4) {
+          grid-column: 2 / span 2;
+        }
+        .process-card:nth-child(5) {
+          grid-column: 4 / span 2;
+        }
+        .process-card::before {
+          content: "";
+          position: absolute;
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          background: rgba(127, 136, 31, 0.07);
+          right: -62px;
+          top: -62px;
+          transition: 0.4s;
+        }
+        .process-card.is-active,
+        .process-card:hover,
+        .process-card:focus-within {
+          transform: translateY(-8px);
+          box-shadow: var(--shadow);
+          border-color: rgba(127, 136, 31, 0.46);
+          background: #fffdf9;
+        }
+        .process-card.is-active::before,
+        .process-card:hover::before {
+          transform: scale(2.25);
+          background: rgba(223, 129, 60, 0.09);
+        }
+        .process-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 32px;
+          position: relative;
+          z-index: 1;
+        }
+        .process-num {
+          font: 600 3.5rem/0.8 var(--serif);
+          color: var(--saffron);
+        }
+        .process-icon {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          border: 1px solid var(--line);
+          display: grid;
+          place-items: center;
+          color: var(--olive-deep);
+          background: #fff;
+        }
+        .process-label {
+          font-size: 0.64rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: var(--olive-deep);
+        }
+        .process-card h3 {
+          font: 600 1.75rem/1.04 var(--serif);
+          margin: 0.7rem 0 1rem;
+          position: relative;
+          z-index: 1;
+        }
+        .process-card p {
+          font-size: 0.84rem;
+          color: var(--muted);
+          line-height: 1.7;
+          margin: 0;
+          position: relative;
+          z-index: 1;
+        }
+        .process-card .process-line {
+          height: 2px;
+          width: 38px;
+          background: var(--saffron);
+          margin-top: 22px;
+          transition: width 0.35s;
+        }
+        .process-card.is-active .process-line,
+        .process-card:hover .process-line {
+          width: 100%;
+        }
+        .process-more {
+          display: flex;
+          justify-content: center;
+          margin-top: 38px;
+          position: relative;
+          z-index: 1;
+        }
+        @media (max-width: 980px) {
+          .how-head {
+            grid-template-columns: 1fr;
+          }
+          .process-rail {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .process-card,
+          .process-card:nth-child(4),
+          .process-card:nth-child(5) {
+            grid-column: auto;
+          }
+          .process-card:last-child {
+            grid-column: 1/-1;
+            min-height: auto;
+          }
+        }
+        @media (max-width: 650px) {
+          .how {
+            padding: 84px 0;
+          }
+          .how-head {
+            gap: 24px;
+          }
+          .how-manifesto {
+            grid-template-columns: 1fr;
+          }
+          .manifesto-piece {
+            min-height: auto;
+            padding: 14px 16px;
+          }
+          .process-rail {
+            grid-template-columns: 1fr;
+          }
+          .process-card,
+          .process-card:last-child {
+            grid-column: auto;
+            min-height: auto;
+            padding: 22px;
+          }
+          .process-top {
+            margin-bottom: 22px;
+          }
+          .process-num {
+            font-size: 3rem;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cards = [...document.querySelectorAll(".process-card")];
+          const activate = (card) =>
+            cards.forEach((item) =>
+              item.classList.toggle("is-active", item === card),
+            );
+          cards.forEach((card) => {
+            card.addEventListener("mouseenter", () => activate(card));
+            card.addEventListener("focusin", () => activate(card));
+          });
+        });
+      </script>
+      <section class="how" id="how-it-works">
+        <div class="container">
+          <div class="how-head reveal">
+            <div>
+              <span class="eyebrow">SECTION 04 — HOW IT WORKS</span>
+              <h2 class="section-title">A process built for real life.</h2>
+              <p class="section-copy">
+                Every introduction is shaped by listening, discretion, consent,
+                and thoughtful human judgment.
+              </p>
+            </div>
+            <div
+              class="how-manifesto"
+              aria-label="What makes the process different"
+            >
+              <div class="manifesto-piece">Not an app.</div>
+              <div class="manifesto-piece">Not an algorithm.</div>
+              <div class="manifesto-piece">
+                A person who genuinely works for you.
+              </div>
+            </div>
+          </div>
+          <div class="process-rail">
+            <article class="process-card is-active reveal" tabindex="0">
+              <div class="process-top">
+                <span class="process-num">01</span
+                ><span class="process-icon">☎</span>
+              </div>
+              <span class="process-label">YOUR FIRST CALL</span>
+              <h3>Meet your personal matchmaker</h3>
+              <p>
+                Every member is paired with a personalised matchmaker — your
+                guide and steadfast support — who takes the time to truly
+                understand you, and walks beside you at every step of the
+                process.
+              </p>
+              <div class="process-line"></div>
+            </article>
+            <article class="process-card reveal" tabindex="0">
+              <div class="process-top">
+                <span class="process-num">02</span
+                ><span class="process-icon">✦</span>
+              </div>
+              <span class="process-label">DEEP DISCOVERY</span>
+              <h3>Tell us what matters to you</h3>
+              <p>
+                In a private conversation, your matchmaker takes the time to
+                understand your values, aspirations, and vision for a meaningful
+                relationship — so that every introduction that follows is made
+                with intention, not chance, and every step of the journey,
+                personalised to you.
+              </p>
+              <div class="process-line"></div>
+            </article>
+            <article class="process-card reveal" tabindex="0">
+              <div class="process-top">
+                <span class="process-num">03</span
+                ><span class="process-icon">✓</span>
+              </div>
+              <span class="process-label">CURATED FOR YOU</span>
+              <h3>We handle everything</h3>
+              <p>
+                Sit back. Our team carefully screens, verifies, and shortlists
+                potential partners — and arranges every detail of your first
+                meeting, tailored to your comfort and preferences.
+              </p>
+              <div class="process-line"></div>
+            </article>
+            <article class="process-card reveal" tabindex="0">
+              <div class="process-top">
+                <span class="process-num">04</span
+                ><span class="process-icon">↻</span>
+              </div>
+              <span class="process-label">ONGOING REFINEMENT</span>
+              <h3>Share feedback after each introduction</h3>
+              <p>
+                Your experience after every introduction matters. A quick
+                conversation with your matchmaker — about what felt right, and
+                what didn't — ensures that each match brings you one step closer
+                to your person.
+              </p>
+              <div class="process-line"></div>
+            </article>
+            <article class="process-card reveal" tabindex="0">
+              <div class="process-top">
+                <span class="process-num">05</span
+                ><span class="process-icon">♡</span>
+              </div>
+              <span class="process-label">LASTING SUCCESS</span>
+              <h3>Find your lasting connection</h3>
+              <p>
+                Every step of your journey is supported. You'll have access to
+                curated private events and optional relationship coaching
+                throughout — to help you build something that lasts.
+              </p>
+              <div class="process-line"></div>
+            </article>
+          </div>
+          <div class="process-more reveal">
+            <a class="btn btn-soft btn-arrow" href="process.html"
+              >Explore the full process</a
+            >
+          </div>
+        </div>
+      </section>
+
+
+      <!-- HOW IT WORKS — Soft five-colour card palette -->
+
+<style id="thulir-how-green-purple-gold-cards">
+.how .process-card:nth-child(1){--a:#1D524A;--d:#153F39;--s:#EDF3F1;--h:#E5EEEB;--b:rgba(29,82,74,.34);--g:rgba(29,82,74,.12)}
+.how .process-card:nth-child(2){--a:#593D4B;--d:#432D39;--s:#F1ECEF;--h:#E9E1E6;--b:rgba(89,61,75,.30);--g:rgba(89,61,75,.11)}
+.how .process-card:nth-child(3){--a:#C5A36B;--d:#8F713E;--s:#FAF6ED;--h:#F4ECDC;--b:rgba(197,163,107,.38);--g:rgba(197,163,107,.13)}
+.how .process-card:nth-child(4){--a:#AC8D8A;--d:#80656A;--s:#F6F0F0;--h:#EEE5E5;--b:rgba(172,141,138,.34);--g:rgba(172,141,138,.12)}
+.how .process-card:nth-child(5){--a:#AFBCBB;--d:#667876;--s:#F0F4F4;--h:#E6EEEE;--b:rgba(175,188,187,.42);--g:rgba(175,188,187,.15)}
+.how .process-card{background:radial-gradient(circle at 100% 0%,var(--g),transparent 34%),linear-gradient(145deg,#fff,var(--s))!important;border-color:var(--b)!important;box-shadow:0 15px 38px rgba(48,54,56,.07)}
+.how .process-card .process-num{color:var(--a)!important}.how .process-card .process-icon{color:var(--d)!important;border-color:var(--b)!important;background:rgba(255,255,255,.85)!important}.how .process-card .process-label{color:var(--d)!important}.how .process-card .process-line{background:var(--a)!important}
+.how .process-card:hover,.how .process-card.is-active,.how .process-card:focus-within{background:radial-gradient(circle at 100% 0%,var(--g),transparent 38%),linear-gradient(145deg,#fff,var(--h))!important;border-color:var(--a)!important;box-shadow:0 22px 52px rgba(48,54,56,.11)}
+</style>
+
+
+      <!-- SECTION 05 — THREE LEVELS OF SUPPORT | Section-local CSS + JS -->
+      <style>
+        .support {
+          padding: 112px 0;
+        }
+        .support-layout {
+          display: grid;
+          grid-template-columns: 0.76fr 1.24fr;
+          gap: 70px;
+          align-items: start;
+        }
+        .support-intro {
+          position: sticky;
+          top: 120px;
+        }
+        .support-intro p {
+          max-width: 430px;
+        }
+        .support-badge {
+          margin-top: 28px;
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          padding: 13px 16px;
+          border: 1px solid var(--line);
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.55);
+          font-size: 0.75rem;
+          color: var(--muted);
+        }
+        .support-badge i {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--saffron);
+        }
+        .support-stack {
+          display: grid;
+          gap: 14px;
+        }
+        .support-level {
+          border: 1px solid var(--line);
+          background: rgba(255, 255, 255, 0.58);
+          border-radius: 26px;
+          overflow: hidden;
+          transition: 0.3s;
+        }
+        .support-level.is-active {
+          background: var(--paper);
+          box-shadow: var(--shadow);
+          border-color: rgba(127, 136, 31, 0.38);
+        }
+        .support-trigger {
+          width: 100%;
+          border: 0;
+          background: transparent;
+          padding: 25px;
+          display: grid;
+          grid-template-columns: 84px 1fr auto;
+          gap: 20px;
+          align-items: center;
+          text-align: left;
+          color: inherit;
+        }
+        .support-index {
+          font: 600 3rem var(--serif);
+          color: var(--saffron);
+        }
+        .support-trigger small {
+          display: block;
+          color: var(--olive-deep);
+          font-size: 0.62rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        .support-trigger h3 {
+          margin: 0.18rem 0 0;
+          font: 600 1.75rem var(--serif);
+        }
+        .support-plus {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          border: 1px solid var(--line);
+          display: grid;
+          place-items: center;
+          font-size: 1.3rem;
+          transition: 0.3s;
+        }
+        .support-level.is-active .support-plus {
+          transform: rotate(45deg);
+          background: var(--ink);
+          color: #fff;
+        }
+        .support-body {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.38s ease;
+        }
+        .support-level.is-active .support-body {
+          grid-template-rows: 1fr;
+        }
+        .support-body-inner {
+          overflow: hidden;
+        }
+        .support-body p {
+          margin: 0;
+          padding: 0 28px 30px 129px;
+          color: var(--muted);
+        }
+        @media (max-width: 900px) {
+          .support-layout {
+            grid-template-columns: 1fr;
+          }
+          .support-intro {
+            position: static;
+          }
+          .support-body p {
+            padding-left: 26px;
+          }
+        }
+        @media (max-width: 620px) {
+          .support {
+            padding: 84px 0;
+          }
+          .support-trigger {
+            grid-template-columns: 54px 1fr auto;
+            padding: 19px 15px;
+            gap: 10px;
+          }
+          .support-index {
+            font-size: 2.25rem;
+          }
+          .support-trigger h3 {
+            font-size: 1.4rem;
+          }
+          .support-plus {
+            width: 36px;
+            height: 36px;
+          }
+          .support-body p {
+            padding: 0 18px 23px;
+            font-size: 0.88rem;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const levels = [...document.querySelectorAll(".support-level")];
+          levels.forEach((level) =>
+            level
+              .querySelector(".support-trigger")
+              ?.addEventListener("click", () => {
+                const open = level.classList.contains("is-active");
+                levels.forEach((item) => {
+                  item.classList.remove("is-active");
+                  item
+                    .querySelector("button")
+                    ?.setAttribute("aria-expanded", "false");
+                });
+                if (!open) {
+                  level.classList.add("is-active");
+                  level
+                    .querySelector("button")
+                    ?.setAttribute("aria-expanded", "true");
+                }
+              }),
+          );
+        });
+      </script>
+      <section class="support" aria-labelledby="support-title">
+        <div class="container support-layout">
+          <div class="support-intro reveal">
+            <span class="eyebrow">SECTION 05 — THREE LEVELS OF SUPPORT</span>
+            <h2 class="section-title" id="support-title">
+              Three levels of dedicated support.
+            </h2>
+            <p class="section-copy">
+              A seamless presence at every stage of your journey.
+            </p>
+            <div class="support-badge">
+              <i></i>Personal, private and unhurried
+            </div>
+          </div>
+          <div class="support-stack reveal">
+            <article class="support-level is-active">
+              <button class="support-trigger" aria-expanded="true">
+                <span class="support-index">01</span
+                ><span
+                  ><small>First point of contact</small>
+                  <h3>Your Thulir Consultation</h3></span
+                ><span class="support-plus">+</span>
+              </button>
+              <div class="support-body">
+                <div class="support-body-inner">
+                  <p>
+                    Before anything begins, you'll have a personal conversation
+                    with our founder — to understand how Thulir works, what to
+                    expect, and which membership is the right fit for where you
+                    are right now. Unhurried, honest, and entirely without
+                    obligation.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="support-level">
+              <button class="support-trigger" aria-expanded="false">
+                <span class="support-index">02</span
+                ><span
+                  ><small>The heart of your journey</small>
+                  <h3>Your Dedicated Matchmaker</h3></span
+                ><span class="support-plus">+</span>
+              </button>
+              <div class="support-body">
+                <div class="support-body-inner">
+                  <p>
+                    Your matchmaker gets to know you deeply — your values, your
+                    story, and what you're truly looking for. They handpick
+                    every introduction with care, ensure consent before any
+                    details are shared, plan every meeting thoughtfully, and
+                    check in with you after each one to keep refining the
+                    search.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="support-level">
+              <button class="support-trigger" aria-expanded="false">
+                <span class="support-index">03</span
+                ><span
+                  ><small>Beyond the introduction</small>
+                  <h3>Relationship Support</h3></span
+                ><span class="support-plus">+</span>
+              </button>
+              <div class="support-body">
+                <div class="support-body-inner">
+                  <p>
+                    Finding the right person is just the beginning. Through
+                    curated private events, optional relationship coaching, and
+                    continued access to your matchmaker, Thulir stays with you —
+                    to help you nurture what you've found into something that
+                    truly lasts.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 06 — MEMBERSHIP & PRICING | Section-local CSS -->
+      <style>
+        .membership {
+          padding: 112px 0;
+          background: linear-gradient(180deg, #f1e8dd 0%, #fbf7f1 100%);
+          border-top: 1px solid var(--line);
+          position: relative;
+          overflow: hidden;
+        }
+        .membership::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(
+            circle at 50% 8%,
+            rgba(223, 129, 60, 0.11),
+            transparent 25%
+          );
+          pointer-events: none;
+        }
+        .membership-head {
+          text-align: center;
+          max-width: 790px;
+          margin: 0 auto 58px;
+          position: relative;
+        }
+        .membership-head .eyebrow {
+          justify-content: center;
+        }
+        .pricing-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+          align-items: stretch;
+          position: relative;
+        }
+        .price-card {
+          background: rgba(255, 255, 255, 0.72);
+          border: 1px solid var(--line);
+          border-radius: 30px;
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          transition: 0.32s;
+          box-shadow: 0 14px 36px rgba(58, 42, 29, 0.05);
+        }
+        .price-card:hover {
+          transform: translateY(-8px);
+          box-shadow: var(--shadow);
+          border-color: rgba(127, 136, 31, 0.38);
+        }
+        .price-card.featured {
+          background: #392f27;
+          color: #fff;
+          transform: translateY(-16px);
+          box-shadow: 0 26px 70px rgba(57, 47, 39, 0.22);
+        }
+        .price-card.featured:hover {
+          transform: translateY(-23px);
+        }
+        .price-card.featured::before {
+          content: "Most chosen";
+          position: absolute;
+          right: -43px;
+          top: 25px;
+          background: var(--saffron);
+          color: #fff;
+          padding: 7px 48px;
+          transform: rotate(38deg);
+          font-size: 0.61rem;
+          text-transform: uppercase;
+          letter-spacing: 0.13em;
+          font-weight: 700;
+        }
+        .tier {
+          font-size: 0.66rem;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: var(--olive-deep);
+        }
+        .featured .tier {
+          color: #efbc91;
+        }
+        .price-card h3 {
+          font: 600 2.25rem/1 var(--serif);
+          margin: 0.55rem 0 0;
+        }
+        .price {
+          font: 600 3.45rem var(--serif);
+          line-height: 1;
+          margin: 1.25rem 0 0.2rem;
+        }
+        .term {
+          color: var(--muted);
+          font-size: 0.8rem;
+        }
+        .featured .term {
+          color: #cfc0b4;
+        }
+        .price-card ul {
+          padding: 0;
+          margin: 26px 0;
+          list-style: none;
+          display: grid;
+          gap: 11px;
+        }
+        .price-card li {
+          display: flex;
+          gap: 10px;
+          font-size: 0.84rem;
+          color: var(--muted);
+        }
+        .featured li {
+          color: #e4d8ce;
+        }
+        .price-card li::before {
+          content: "✓";
+          color: var(--olive);
+          font-weight: 800;
+        }
+        .featured li::before {
+          color: #eba36d;
+        }
+        .price-note {
+          font-size: 0.75rem;
+          color: var(--muted);
+          padding-top: 15px;
+          border-top: 1px solid var(--line);
+        }
+        .featured .price-note {
+          color: #cbbeb2;
+          border-color: rgba(255, 255, 255, 0.15);
+        }
+        .price-card .btn {
+          margin-top: auto;
+        }
+        .featured .btn {
+          background: #fff;
+          color: var(--ink);
+        }
+        .membership-enroll {
+          text-align: center;
+          margin-top: 44px;
+          position: relative;
+        }
+        .membership-enroll p {
+          color: var(--muted);
+          font-size: 0.84rem;
+          margin: 0 0 15px;
+        }
+        .membership-enroll .btn {
+          min-width: 220px;
+        }
+        @media (max-width: 940px) {
+          .pricing-grid {
+            grid-template-columns: 1fr;
+            max-width: 650px;
+            margin: auto;
+          }
+          .price-card.featured {
+            transform: none;
+            order: -1;
+          }
+          .price-card.featured:hover {
+            transform: translateY(-7px);
+          }
+        }
+        @media (max-width: 620px) {
+          .membership {
+            padding: 84px 0;
+          }
+          .price-card {
+            padding: 25px 21px;
+          }
+          .membership-head {
+            margin-bottom: 38px;
+          }
+          .membership-enroll .btn {
+            width: 100%;
+          }
+        }
+      </style>
+      <section class="membership" id="membership">
+        <div class="container">
+          <div class="membership-head reveal">
+            <span class="eyebrow">SECTION 06 — MEMBERSHIP &amp; PRICING</span>
+            <h2 class="section-title">Choose your path to connection.</h2>
+            <p class="section-copy" style="margin-inline: auto">
+              Every tier is designed with care — whether you're taking a first
+              step or ready to dive in fully.
+            </p>
+          </div>
+          <div class="pricing-grid">
+            <article class="price-card reveal">
+              <span class="tier">SILVER — Listed Member</span>
+              <h3>A gentle first step</h3>
+              <div class="price">₹499</div>
+              <div class="term">One-time fee</div>
+              <ul>
+                <li>Profile created and verified</li>
+                <li>Listed in the Thulir member pool</li>
+                <li>
+                  Eligible to be surfaced as a potential match from day one
+                </li>
+                <li>No active matchmaking support</li>
+                <li>Ideal for those taking a first gentle step</li>
+              </ul>
+              <p class="price-note">
+                Getting listed means you're visible and eligible for matches
+                from day one — some members find a connection this way. If you'd
+                like a dedicated matchmaker actively working on your behalf,
+                Gold and Pearl are built for that.
+              </p>
+              <a class="btn btn-soft" href="#thlrJourneyChooser" data-thlr-plan="silver"
+                >Get listed</a
+              >
+            </article>
+            <article class="price-card featured reveal">
+              <span class="tier">GOLD — Personal Matchmaking</span>
+              <h3>Personal support beside you</h3>
+              <div class="price">₹2,999</div>
+              <div class="term">3 months</div>
+              <ul>
+                <li>Dedicated personal matchmaker assigned</li>
+                <li>One-on-one intake session</li>
+                <li>2–3 curated introductions per month</li>
+                <li>Follow-up check-in after each introduction</li>
+                <li>Feedback loop — refined with every match</li>
+                <li>WhatsApp &amp; call access for check-ins</li>
+              </ul>
+              <a class="btn" href="#thlrJourneyChooser" data-thlr-plan="gold">Begin your journey</a>
+            </article>
+            <article class="price-card reveal">
+              <span class="tier">PEARL — Concierge</span>
+              <h3>Priority, deeper support</h3>
+              <div class="price">₹4,999</div>
+              <div class="term">3 months</div>
+              <ul>
+                <li>Everything in Gold, plus</li>
+                <li>4–6 curated introductions per month</li>
+                <li>Fixed monthly review call with your matchmaker</li>
+                <li>1 relationship coaching session per month</li>
+                <li>Invitations to Thulir private events</li>
+                <li>Priority handling &amp; faster turnarounds</li>
+              </ul>
+              <a class="btn btn-soft" href="#thlrJourneyChooser" data-thlr-plan="pearl"
+                >Enquire now</a
+              >
+            </article>
+          </div>
+          <div class="membership-enroll reveal">
+            <p>
+              Not ready to select a membership yet? Begin with your private
+              enrollment first.
+            </p>
+            <a class="btn btn-primary btn-arrow" href="#thlrJourneyChooser">Enroll</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 09 — TESTIMONIALS | Section-local CSS -->
+      <style>
+        .testimonials {
+          padding: 108px 0;
+        }
+        .stories-shell {
+          display: grid;
+          grid-template-columns: 0.82fr 1.18fr;
+          gap: 18px;
+          align-items: stretch;
+        }
+        .stories-title-card {
+          background: var(--ink);
+          color: #fff;
+          border-radius: 32px;
+          padding: clamp(30px, 5vw, 55px);
+          position: relative;
+          overflow: hidden;
+        }
+        .stories-title-card::after {
+          content: "“";
+          position: absolute;
+          right: 20px;
+          bottom: -20px;
+          font: 500 11rem/0.8 var(--serif);
+          color: rgba(255, 255, 255, 0.07);
+        }
+        .stories-title-card .eyebrow {
+          color: #efb789;
+        }
+        .stories-title-card h2 {
+          font: 600 clamp(2.55rem, 4.7vw, 4.7rem)/0.94 var(--serif);
+          margin: 18px 0 24px;
+        }
+        .stories-title-card a {
+          color: #f2af78;
+          font-weight: 700;
+          font-size: 0.84rem;
+        }
+        .story-placeholder {
+          background: var(--paper);
+          border: 1px solid var(--line);
+          border-radius: 32px;
+          padding: clamp(30px, 5vw, 58px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          box-shadow: var(--shadow-sm);
+        }
+        .story-placeholder::before {
+          content: "";
+          position: absolute;
+          width: 170px;
+          height: 170px;
+          border-radius: 50%;
+          border: 1px solid rgba(127, 136, 31, 0.13);
+          right: -70px;
+          top: -80px;
+        }
+        .story-placeholder p {
+          font: 500 clamp(1.45rem, 2.6vw, 2.35rem)/1.28 var(--serif);
+          color: #4c4035;
+          margin: 0 0 23px;
+        }
+        .story-placeholder .placeholder-note {
+          font: 500 0.78rem/1.6 var(--sans);
+          color: var(--muted);
+          padding: 15px 17px;
+          border: 1px dashed var(--line-strong);
+          border-radius: 14px;
+          background: var(--ivory);
+        }
+        @media (max-width: 780px) {
+          .testimonials {
+            padding: 84px 0;
+          }
+          .stories-shell {
+            grid-template-columns: 1fr;
+          }
+          .stories-title-card,
+          .story-placeholder {
+            border-radius: 24px;
+          }
+        }
+      </style>
+      <section class="testimonials" aria-labelledby="stories-title">
+        <div class="container stories-shell">
+          <div class="stories-title-card reveal">
+            <span class="eyebrow">SECTION 09 — TESTIMONIALS</span>
+            <h2 id="stories-title">
+              Our first stories are still being written.
+            </h2>
+            <a href="founder-story.html">Read our founder's story ↗</a>
+          </div>
+          <div class="story-placeholder reveal">
+            <p>
+              Thulir is newly founded — our first stories are still being
+              written. We would rather earn trust slowly than borrow it. Until
+              then, we invite you to read our founder's story — and to trust not
+              in numbers, but in intention.
+            </p>
+            <div class="placeholder-note">
+              [Let your sign guide you when you feel like you've lost your way]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10 — FAQ | Section-local CSS + JS -->
+      <style>
+        .faq {
+          padding: 112px 0;
+          background: var(--paper);
+          border-top: 1px solid var(--line);
+        }
+        .faq-layout {
+          display: grid;
+          grid-template-columns: 0.64fr 1.36fr;
+          gap: 70px;
+          align-items: start;
+        }
+        .faq-head {
+          position: sticky;
+          top: 120px;
+        }
+        .faq-head .section-copy {
+          max-width: 410px;
+        }
+        .faq-content {
+          min-width: 0;
+        }
+        .faq-chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 9px;
+          margin-bottom: 28px;
+          padding: 8px;
+          background: var(--ivory);
+          border: 1px solid var(--line);
+          border-radius: 18px;
+        }
+        .faq-chip {
+          border: 0;
+          border-radius: 12px;
+          padding: 0.78rem 1rem;
+          background: transparent;
+          color: var(--ink);
+          font-size: 0.75rem;
+          font-weight: 700;
+          transition: 0.22s;
+          flex: 1;
+          min-width: max-content;
+        }
+        .faq-chip:hover,
+        .faq-chip[aria-selected="true"] {
+          background: var(--ink);
+          color: #fff;
+          box-shadow: 0 8px 18px rgba(57, 47, 39, 0.14);
+        }
+        .faq-panel {
+          display: none;
+        }
+        .faq-panel.is-active {
+          display: block;
+          animation: faqIn 0.35s ease;
+        }
+        @keyframes faqIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+        }
+        .faq-category-title {
+          font: 600 2.1rem var(--serif);
+          margin: 0 0 13px;
+          color: var(--olive-deep);
+        }
+        .faq-list {
+          border-top: 1px solid var(--line);
+        }
+        .faq-item {
+          border-bottom: 1px solid var(--line);
+        }
+        .faq-question {
+          width: 100%;
+          border: 0;
+          background: transparent;
+          padding: 21px 0;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 22px;
+          text-align: left;
+          color: var(--ink);
+          font-weight: 700;
+          font-size: 0.95rem;
+        }
+        .faq-question span:first-child {
+          max-width: 780px;
+        }
+        .faq-question span:last-child {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          border: 1px solid var(--line);
+          display: grid;
+          place-items: center;
+          transition: 0.3s;
+        }
+        .faq-item.open .faq-question span:last-child {
+          transform: rotate(45deg);
+          background: var(--olive);
+          border-color: var(--olive);
+          color: #fff;
+        }
+        .faq-answer {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.35s;
+        }
+        .faq-item.open .faq-answer {
+          grid-template-rows: 1fr;
+        }
+        .faq-answer > div {
+          overflow: hidden;
+        }
+        .faq-answer p {
+          margin: 0;
+          padding: 0 54px 24px 0;
+          color: var(--muted);
+          max-width: 950px;
+          font-size: 0.9rem;
+        }
+        @media (max-width: 900px) {
+          .faq-layout {
+            grid-template-columns: 1fr;
+            gap: 34px;
+          }
+          .faq-head {
+            position: static;
+          }
+        }
+        @media (max-width: 620px) {
+          .faq {
+            padding: 84px 0;
+          }
+          .faq-chips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          }
+          .faq-chip {
+            min-width: 0;
+            padding: 0.7rem 0.45rem;
+            font-size: 0.68rem;
+          }
+          .faq-answer p {
+            padding-right: 0;
+          }
+          .faq-question {
+            font-size: 0.9rem;
+            gap: 14px;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const chips = [...document.querySelectorAll(".faq-chip")],
+            panels = [...document.querySelectorAll(".faq-panel")];
+          chips.forEach((chip) =>
+            chip.addEventListener("click", () => {
+              chips.forEach((item) =>
+                item.setAttribute("aria-selected", "false"),
+              );
+              chip.setAttribute("aria-selected", "true");
+              panels.forEach((panel) =>
+                panel.classList.toggle(
+                  "is-active",
+                  panel.dataset.category === chip.dataset.category,
+                ),
+              );
+            }),
+          );
+          document.querySelectorAll(".faq-question").forEach((button) =>
+            button.addEventListener("click", () => {
+              const item = button.closest(".faq-item"),
+                panel = button.closest(".faq-panel");
+              panel.querySelectorAll(".faq-item").forEach((other) => {
+                if (other !== item) {
+                  other.classList.remove("open");
+                  other
+                    .querySelector("button")
+                    ?.setAttribute("aria-expanded", "false");
+                }
+              });
+              const open = item.classList.toggle("open");
+              button.setAttribute("aria-expanded", String(open));
+            }),
+          );
+        });
+      </script>
+      <section class="faq" id="faq">
+        <div class="container faq-layout">
+          <div class="faq-head reveal">
+            <span class="eyebrow">SECTION 10 — FREQUENTLY ASKED QUESTIONS</span>
+            <h2 class="section-title">Questions you may have.</h2>
+            <p class="section-copy">
+              We believe in complete transparency — about our process, our
+              people, and what you can expect at every step.
+            </p>
+          </div>
+          <div class="faq-content">
+            <div
+              class="faq-chips reveal"
+              role="tablist"
+              aria-label="FAQ categories"
+            >
+              <button
+                class="faq-chip"
+                role="tab"
+                aria-selected="true"
+                data-category="about"
+              >
+                About Thulir
+              </button>
+              <button
+                class="faq-chip"
+                role="tab"
+                aria-selected="false"
+                data-category="started"
+              >
+                Getting Started
+              </button>
+              <button
+                class="faq-chip"
+                role="tab"
+                aria-selected="false"
+                data-category="process"
+              >
+                Matchmaking Process
+              </button>
+              <button
+                class="faq-chip"
+                role="tab"
+                aria-selected="false"
+                data-category="support"
+              >
+                Support &amp; Wellbeing
+              </button>
+            </div>
+
+            <div class="faq-panel is-active" data-category="about">
+              <h3 class="faq-category-title">About Thulir</h3>
+              <div class="faq-list">
+                <article class="faq-item open">
+                  <button class="faq-question" aria-expanded="true">
+                    <span>What is Thulir, and who is it for?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Thulir is a boutique matchmaking service open to all
+                        singles aged 25 and above. We welcome never-married
+                        individuals, but our heart lies in serving divorced and
+                        widowed adults — people who have lived, loved, and are
+                        now ready to find meaningful companionship again. We are
+                        not a dating app. We are a human-led, concierge
+                        matchmaking service where a real person works personally
+                        on your behalf.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span
+                      >How is Thulir different from matrimonial websites and
+                      dating apps?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Matrimonial websites and dating apps put the burden
+                        entirely on you — to browse, filter, message, and hope.
+                        Thulir is different in three fundamental ways. First, a
+                        dedicated matchmaker does all the work for you — no
+                        swiping, no endless scrolling. Second, every
+                        introduction is handpicked with care and made only after
+                        both parties give consent. Third, we stay with you
+                        throughout — refining every match based on your
+                        feedback, supporting you at every step. This is not a
+                        platform. This is a relationship.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Is Thulir only for people in Chennai?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        No. While Thulir is headquartered in Chennai and has
+                        deep roots in the Chennai, Pondicherry, and Kanchipuram
+                        region, we facilitate introductions across India. If you
+                        are based in another city but open to connecting with
+                        someone from anywhere in the country, we welcome you
+                        wholeheartedly.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="faq-panel" data-category="started">
+              <h3 class="faq-category-title">Getting Started</h3>
+              <div class="faq-list">
+                <article class="faq-item open">
+                  <button class="faq-question" aria-expanded="true">
+                    <span>How do I join Thulir?</span><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        You begin by filling a detailed enrollment form on our
+                        website — covering your background, lifestyle, values,
+                        and what you are looking for. Once we review your
+                        profile, our founder personally reaches out to schedule
+                        a consultation call — to walk you through the process,
+                        answer your questions, and help you choose the right
+                        membership for where you are right now.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span
+                      >Is there a screening process before I am accepted?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Yes. Every member goes through a profile review and an
+                        intake call before being welcomed into the Thulir member
+                        pool. This ensures that everyone in our network is
+                        genuine, serious, and respectful — creating a safe and
+                        trustworthy community for all.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Are profiles verified?</span><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Yes. All profiles go through a third-party background
+                        verification process. That said, while we take every
+                        reasonable precaution to ensure authenticity, no
+                        verification process is entirely infallible. We
+                        encourage all members to exercise personal judgment and
+                        proceed at their own comfort level during introductions.
+                        Your safety matters deeply to us — and we are always
+                        available if you have a concern.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>What are the membership options?</span><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Thulir offers three tiers — Silver (₹499, one-time
+                        listing fee), Gold (₹2,999 for 3 months of personal
+                        matchmaking), and Pearl (₹4,999 for 3 months of
+                        concierge matchmaking with coaching and events access).
+                        Each tier is designed to meet you where you are in your
+                        journey.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Can I upgrade my membership later?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Yes. You can upgrade from Silver to Gold or Pearl, or
+                        from Gold to Pearl, at any point. Your matchmaker will
+                        guide you through the transition without any disruption
+                        to your journey.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>What if I am not ready for matchmaking yet?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        That is completely understood. You can begin with a
+                        Silver membership — get listed, get comfortable, and
+                        take your time. When you feel ready, your matchmaker
+                        will be there to take the next step with you. There is
+                        no pressure, and no rush.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="faq-panel" data-category="process">
+              <h3 class="faq-category-title">The Matchmaking Process</h3>
+              <div class="faq-list">
+                <article class="faq-item open">
+                  <button class="faq-question" aria-expanded="true">
+                    <span>How does Thulir find my matches?</span><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Your matchmaker personally reviews profiles in our
+                        member pool and identifies compatible matches based on
+                        your values, preferences, and aspirations — not just age
+                        and location. Every introduction is made only after both
+                        parties give explicit consent. No personal details are
+                        shared without your knowledge.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>How many introductions will I receive?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        This depends on your membership tier. Gold members
+                        receive 2–3 curated introductions per month. Pearl
+                        members receive 4–6 introductions per month, with
+                        priority handling and faster turnarounds. All
+                        introductions are handpicked — never random, never
+                        rushed.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Will my information be kept confidential?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Absolutely. Your profile, personal details, and all
+                        conversations with your matchmaker are treated with
+                        complete confidentiality. We comply with India's Digital
+                        Personal Data Protection Act (DPDPA) 2023, and your
+                        information is never shared without your explicit
+                        consent.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>What kind of events does Thulir organise?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Our events are designed to help you connect naturally —
+                        without the pressure of a one-on-one introduction. We
+                        organise small, curated experiences including pottery
+                        and painting workshops, trekking outings, group sport
+                        events, shared hobby meetups, intimate group dinners,
+                        and occasional curated group trips. These are spaces
+                        where you get to know people as they truly are — through
+                        shared experiences, not rehearsed conversations.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Are events mandatory?</span><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        Not at all. Events are available to Pearl members and
+                        are entirely optional. They are simply a gentler, more
+                        relaxed way to meet like-minded people — and many
+                        members find them to be the most enjoyable part of their
+                        Thulir journey.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="faq-panel" data-category="support">
+              <h3 class="faq-category-title">Support &amp; Wellbeing</h3>
+              <div class="faq-list">
+                <article class="faq-item open">
+                  <button class="faq-question" aria-expanded="true">
+                    <span
+                      >What if I am still healing and not sure I am ready?</span
+                    ><span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <div>
+                      <p>
+                        We understand. Beginning again after divorce or loss
+                        takes courage, and readiness looks different for
+                        everyone. As an add-on, Thulir offers access to licensed
+                        relationship counsellors who can support you before or
+                        during your matchmaking journey — at your own pace,
+                        entirely on your own terms. For those who'd prefer
+                        shared healing, Thulir also offers a small-group divorce
+                        support circle — details on request.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING CTA | Section-local CSS -->
+      <style>
+        .closing {
+          padding: 100px 0;
+        }
+        .closing-card {
+          text-align: center;
+          padding: clamp(42px, 7vw, 78px);
+          border-radius: 36px;
+          background: linear-gradient(
+            135deg,
+            rgba(127, 136, 31, 0.15),
+            rgba(223, 129, 60, 0.13)
+          );
+          border: 1px solid var(--line);
+          position: relative;
+          overflow: hidden;
+        }
+        .closing-card::before,
+        .closing-card::after {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          border: 1px solid rgba(89, 96, 19, 0.14);
+        }
+        .closing-card::before {
+          width: 290px;
+          height: 290px;
+          left: -170px;
+          top: -180px;
+        }
+        .closing-card::after {
+          width: 230px;
+          height: 230px;
+          right: -120px;
+          bottom: -150px;
+        }
+        .closing-card h2 {
+          font: 600 clamp(3rem, 6vw, 6rem)/0.88 var(--serif);
+          margin: 0 auto 18px;
+          max-width: 880px;
+        }
+        .closing-card p {
+          color: var(--muted);
+          max-width: 620px;
+          margin: 0 auto 28px;
+        }
+        @media (max-width: 620px) {
+          .closing {
+            padding: 80px 0;
+          }
+          .closing-card {
+            border-radius: 24px;
+          }
+        }
+      </style>
+      <section class="closing">
+        <div class="container closing-card reveal">
+          <span class="eyebrow">Your next chapter</span>
+          <h2>Begin gently. Begin honestly. Begin again.</h2>
+          <p>
+            Your enrollment is private, unhurried, and reviewed by a real
+            person.
+          </p>
+          <a class="btn btn-primary btn-arrow" href="#thlrJourneyChooser"
+            >Start your enrollment</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-identity">
+            <img src="assets/images/thulir-mark.png" alt="" />
+            <div class="footer-brand">
+              <h2>Thulir <span class="tamil">· துளிர்</span></h2>
+              <div class="footer-tagline">Life always finds a way to grow.</div>
+            </div>
+          </div>
+          <div class="footer-nav-area">
+            <div class="footer-column">
+              <strong>Explore</strong>
+              <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#home">Home</a><a href="#about">About</a
+                ><a href="#how-it-works">How it works</a
+                ><a href="#membership">Membership</a><a href="#faq">FAQ</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <strong>More</strong>
+              <nav class="footer-links">
+                <a href="process.html">Full process</a
+                ><a href="founder-story.html">Founder’s story</a
+                ><a href="#thlrJourneyChooser">Enrollment</a><span>Chennai, India</span>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="footer-journey">
+          <p>
+            <strong>Ready for a thoughtful beginning?</strong>Your first step is
+            private, unhurried, and entirely yours.
+          </p>
+          <a class="btn" href="#thlrJourneyChooser">Begin your journey ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Thulir. Chennai, India. All rights reserved.</span
+          ><span>Human-led · Verified · Consent-first</span>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/global.js"></script>
+  </body>
+</html>
