@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Thulir enrollment for divorced or widowed adults ready to begin again." />
+    <meta name="theme-color" content="#294f3e" />
+    <title>Beginning Again Enrollment · Thulir</title>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+
+  <body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="Thulir home">
+          <img src="assets/images/thulir-mark.png" alt="" />
+          <span class="brand-word"><strong>Thulir</strong><span>துளிர்</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Desktop navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#how-it-works">How it works</a>
+          <a href="process.html">Full process</a>
+          <a href="index.html#membership">Membership</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="founder-story.html">Our story</a>
+          <a class="btn btn-primary nav-cta" href="index.html#thlrJourneyChooser">Begin journey</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <aside class="mobile-panel" aria-label="Mobile navigation">
+        <div class="mobile-panel-head">
+          <a class="brand" href="index.html">
+            <img src="assets/images/thulir-mark.png" alt="" />
+            <span class="brand-word"><strong>Thulir</strong><span>துளிர்</span></span>
+          </a>
+          <button class="mobile-close" aria-label="Close menu">Close</button>
+        </div>
+
+        <nav class="mobile-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About Thulir</a>
+          <a href="index.html#how-it-works">How it works</a>
+          <a href="process.html">Full process</a>
+          <a href="index.html#membership">Membership</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="founder-story.html">Founder’s story</a>
+        </nav>
+
+        <a class="btn btn-primary" href="index.html#thlrJourneyChooser">Begin your journey</a>
+        <p class="mobile-caption">Human-led · Verified · Consent-first</p>
+      </aside>
+    </div>
+
+
+    <main id="main">
+
+      <style>
+        #dw1Section,
+        #dw1Section *,
+        #dw1Section *::before,
+        #dw1Section *::after {
+          box-sizing: border-box;
+        }
+
+        #dw1Section {
+          --ep-bg: #fffaf2;
+          --ep-paper: #fffef9;
+          --ep-ink: #20362f;
+          --ep-muted: #66766e;
+          --ep-green: #758a20;
+          --ep-green-dark: #405b16;
+          --ep-orange: #f58a3c;
+          --ep-line: rgba(64, 91, 22, 0.16);
+          --ep-dark: #294f3e;
+          --ep-serif: "Cormorant Garamond", Georgia, serif;
+          --ep-sans: "Manrope", Arial, sans-serif;
+
+          position: relative;
+          isolation: isolate;
+          width: 100%;
+          max-width: 100%;
+          min-height: 100svh;
+          padding: 126px 0 74px;
+          overflow-x: clip;
+          color: var(--ep-ink);
+          font-family: var(--ep-sans);
+          background:
+            radial-gradient(circle at 96% 4%, rgba(245, 138, 60, 0.12), transparent 25%),
+            radial-gradient(circle at 4% 96%, rgba(117, 138, 32, 0.09), transparent 27%),
+            var(--ep-bg);
+        }
+
+        #dw1Section .dw1-wrap {
+          width: min(1180px, calc(100% - 40px));
+          margin: 0 auto;
+        }
+
+        #dw1Section .dw1-layout {
+          display: grid;
+          grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1.42fr);
+          gap: 28px;
+          align-items: start;
+          width: 100%;
+          min-width: 0;
+        }
+
+        #dw1Section .dw1-layout > * {
+          min-width: 0;
+          max-width: 100%;
+        }
+
+        #dw1Section .dw1-aside {
+          position: sticky;
+          top: 108px;
+          padding: 34px;
+          overflow: hidden;
+          border-radius: 30px;
+          color: #fff;
+          background:
+            radial-gradient(circle at 100% 100%, rgba(245, 138, 60, 0.24), transparent 36%),
+            linear-gradient(145deg, #294f3e, #426727);
+          box-shadow: 0 25px 65px rgba(41, 79, 62, 0.2);
+        }
+
+        #dw1Section .dw1-aside::after {
+          content: "";
+          position: absolute;
+          right: -110px;
+          bottom: -120px;
+          width: 230px;
+          height: 230px;
+          border: 1px solid rgba(255,255,255,0.12);
+          border-radius: 50%;
+          pointer-events: none;
+        }
+
+        #dw1Section .dw1-logo {
+          display: block;
+          width: 100px;
+          max-width: 100%;
+          filter: brightness(0) invert(1);
+          opacity: 0.94;
+        }
+
+        #dw1Section .dw1-aside h1 {
+          margin: 23px 0 14px;
+          font: 600 clamp(2.55rem, 4vw, 3.55rem)/0.92 var(--ep-serif);
+          overflow-wrap: anywhere;
+        }
+
+        #dw1Section .dw1-aside p {
+          margin: 0;
+          color: rgba(255,255,255,0.8);
+          font-size: 0.88rem;
+          line-height: 1.75;
+          overflow-wrap: anywhere;
+        }
+
+        #dw1Section .dw1-aside-meta {
+          display: grid;
+          gap: 10px;
+          margin-top: 24px;
+          padding-top: 18px;
+          border-top: 1px solid rgba(255,255,255,0.14);
+          color: rgba(255,255,255,0.72);
+          font-size: 0.73rem;
+        }
+
+        #dw1Section .dw1-aside-meta strong {
+          color: #ffc08a;
+        }
+
+        #dw1Section .dw1-card {
+          width: 100%;
+          min-width: 0;
+          padding: clamp(24px, 4.5vw, 48px);
+          overflow: hidden;
+          border: 1px solid var(--ep-line);
+          border-radius: 30px;
+          background: var(--ep-paper);
+          box-shadow: 0 26px 70px rgba(49,79,39,0.13);
+        }
+
+        #dw1Section .dw1-progress {
+          display: grid;
+          grid-template-columns: auto minmax(0,1fr) auto;
+          gap: 14px;
+          align-items: center;
+          margin-bottom: 28px;
+        }
+
+        #dw1Section .dw1-progress strong {
+          font-size: 0.72rem;
+          letter-spacing: 0.13em;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+
+        #dw1Section .dw1-track {
+          height: 6px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: #f1e8dd;
+        }
+
+        #dw1Section .dw1-fill {
+          height: 100%;
+          border-radius: inherit;
+          background: linear-gradient(90deg, var(--ep-green), var(--ep-orange));
+        }
+
+        #dw1Section .dw1-count {
+          color: var(--ep-muted);
+          font-size: 0.72rem;
+          white-space: nowrap;
+        }
+
+        #dw1Section .dw1-badge {
+          display: none;
+          margin-bottom: 22px;
+          padding: 12px 14px;
+          border: 1px solid rgba(117,138,32,0.22);
+          border-radius: 14px;
+          background: rgba(117,138,32,0.08);
+          color: var(--ep-ink);
+          font-size: 0.8rem;
+          line-height: 1.55;
+        }
+
+        #dw1Section .dw1-badge.is-visible {
+          display: block;
+        }
+
+        #dw1Section .dw1-title {
+          margin: 0 0 10px;
+          font: 600 clamp(2.6rem, 5vw, 4.5rem)/0.94 var(--ep-serif);
+          overflow-wrap: anywhere;
+        }
+
+        #dw1Section .dw1-subtitle {
+          margin: 0 0 30px;
+          color: var(--ep-muted);
+          line-height: 1.7;
+        }
+
+        #dw1Section .dw1-questions {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px;
+          width: 100%;
+          min-width: 0;
+        }
+
+        #dw1Section .dw1-section-head {
+          grid-column: 1 / -1;
+          margin-top: 14px;
+          padding: 20px 22px;
+          border-left: 4px solid var(--ep-orange);
+          border-radius: 0 18px 18px 0;
+          background:
+            linear-gradient(90deg, rgba(245,138,60,0.1), rgba(117,138,32,0.04));
+        }
+
+        #dw1Section .dw1-section-head:first-child {
+          margin-top: 0;
+        }
+
+        #dw1Section .dw1-section-head h3 {
+          margin: 0 0 5px;
+          color: var(--ep-green-dark);
+          font: 600 1.45rem/1.05 var(--ep-serif);
+        }
+
+        #dw1Section .dw1-section-head p {
+          margin: 0;
+          color: var(--ep-muted);
+          font-size: 0.8rem;
+          line-height: 1.55;
+        }
+
+        #dw1Section .dw1-field {
+          display: grid;
+          gap: 8px;
+          width: 100%;
+          min-width: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+        }
+
+        #dw1Section .dw1-wide {
+          grid-column: 1 / -1;
+        }
+
+        #dw1Section .dw1-label,
+        #dw1Section .dw1-legend {
+          display: block;
+          margin: 0;
+          padding: 0;
+          color: #334a40;
+          font-size: 0.81rem;
+          font-weight: 700;
+          line-height: 1.55;
+          overflow-wrap: anywhere;
+        }
+
+        #dw1Section .dw1-number {
+          margin-right: 6px;
+          color: var(--ep-orange);
+        }
+
+        #dw1Section .dw1-required {
+          color: #b25339;
+        }
+
+        #dw1Section .dw1-optional {
+          color: #9a8c7f;
+          font-size: 0.68rem;
+          font-weight: 500;
+        }
+
+        #dw1Section .dw1-control {
+          display: block;
+          width: 100%;
+          min-width: 0;
+          max-width: 100%;
+          margin: 0;
+          padding: 13px 14px;
+          border: 1px solid var(--ep-line);
+          border-radius: 14px;
+          outline: 0;
+          background: #fffdfb;
+          color: var(--ep-ink);
+          font: inherit;
+          line-height: 1.4;
+          transition: border-color .2s ease, box-shadow .2s ease;
+        }
+
+        #dw1Section textarea.dw1-control {
+          min-height: 116px;
+          resize: vertical;
+        }
+
+        #dw1Section .dw1-control:focus {
+          border-color: var(--ep-green);
+          box-shadow: 0 0 0 4px rgba(117,138,32,0.09);
+        }
+
+        #dw1Section .dw1-choices {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          width: 100%;
+          min-width: 0;
+        }
+
+        #dw1Section .dw1-choice {
+          position: relative;
+          display: block;
+          min-width: 0;
+          max-width: 100%;
+        }
+
+        #dw1Section .dw1-choice input {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        #dw1Section .dw1-choice span {
+          display: block;
+          max-width: 100%;
+          padding: .63rem .84rem;
+          border: 1px solid var(--ep-line);
+          border-radius: 999px;
+          background: #fff;
+          color: var(--ep-ink);
+          font-size: .74rem;
+          line-height: 1.42;
+          cursor: pointer;
+          white-space: normal;
+          overflow-wrap: anywhere;
+        }
+
+        #dw1Section .dw1-choice input:checked + span {
+          border-color: var(--ep-dark);
+          background: var(--ep-dark);
+          color: #fff;
+        }
+
+        #dw1Section .dw1-choice input:focus-visible + span {
+          outline: 3px solid rgba(245,138,60,0.28);
+          outline-offset: 2px;
+        }
+
+        #dw1Section .dw1-note {
+          color: var(--ep-muted);
+          font-size: .69rem;
+          line-height: 1.5;
+        }
+
+        #dw1Section .dw1-error {
+          display: none;
+          margin-top: 20px;
+          padding: 13px 14px;
+          border: 1px solid #efc8bb;
+          border-radius: 12px;
+          background: #fff0eb;
+          color: #a03f2b;
+          font-size: .8rem;
+          line-height: 1.55;
+        }
+
+        #dw1Section .dw1-error.is-visible {
+          display: block;
+        }
+
+        #dw1Section .dw1-actions {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          margin-top: 34px;
+          padding-top: 24px;
+          border-top: 1px solid var(--ep-line);
+        }
+
+        #dw1Section .dw1-action {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 50px;
+          padding: .78rem 1.2rem;
+          border: 1px solid transparent;
+          border-radius: 999px;
+          color: var(--ep-ink);
+          font-family: var(--ep-sans);
+          font-size: .82rem;
+          font-weight: 700;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+        }
+
+        #dw1Section .dw1-back {
+          border-color: var(--ep-line);
+          background: #fff;
+        }
+
+        #dw1Section .dw1-next {
+          background: var(--ep-dark);
+          color: #fff;
+          box-shadow: 0 13px 30px rgba(41,79,62,0.2);
+        }
+
+        #dw1Section .dw1-next::after {
+          content: "↗";
+          margin-left: 9px;
+        }
+
+        #dw1Section .dw1-next:disabled {
+          opacity: .65;
+          cursor: wait;
+        }
+
+        #dw1Section .dw1-submit-note {
+          margin: 13px 0 0;
+          color: var(--ep-muted);
+          font-size: .7rem;
+          line-height: 1.55;
+          text-align: center;
+        }
+
+        #dw1Success {
+          position: fixed;
+          inset: 0;
+          z-index: 5000;
+          display: grid;
+          place-items: center;
+          width: 100%;
+          height: 100dvh;
+          padding: 20px;
+          background: rgba(27,45,38,0.58);
+          backdrop-filter: blur(9px);
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transition: .3s;
+        }
+
+        #dw1Success.is-visible {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+
+        #dw1Success .dw1-success-card {
+          width: min(570px, 100%);
+          padding: 42px;
+          border-radius: 30px;
+          background: #fffef9;
+          color: #20362f;
+          text-align: center;
+          box-shadow: 0 30px 80px rgba(28,41,35,0.26);
+        }
+
+        #dw1Success .dw1-success-mark {
+          display: grid;
+          place-items: center;
+          width: 70px;
+          height: 70px;
+          margin: 0 auto 18px;
+          border-radius: 50%;
+          background: rgba(117,138,32,0.13);
+          color: #405b16;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        #dw1Success h2 {
+          margin: 0 0 12px;
+          font: 600 clamp(2.35rem, 7vw, 3.2rem)/.95 var(--ep-serif);
+        }
+
+        #dw1Success p {
+          margin: 0 0 23px;
+          color: #66766e;
+          line-height: 1.7;
+        }
+
+        #dw1Success a {
+          display: inline-flex;
+          min-height: 50px;
+          align-items: center;
+          justify-content: center;
+          padding: .78rem 1.25rem;
+          border-radius: 999px;
+          background: #294f3e;
+          color: #fff;
+          font-size: .82rem;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        @media (max-width: 920px) {
+          #dw1Section {
+            padding-top: 110px;
+          }
+
+          #dw1Section .dw1-layout {
+            grid-template-columns: minmax(0,1fr);
+          }
+
+          #dw1Section .dw1-aside {
+            position: relative;
+            top: auto;
+          }
+
+          #dw1Section .dw1-questions {
+            grid-template-columns: minmax(0,1fr);
+          }
+
+          #dw1Section .dw1-wide {
+            grid-column: auto;
+          }
+        }
+
+        @media (max-width: 650px) {
+          #dw1Section {
+            padding: 92px 0 46px;
+          }
+
+          #dw1Section .dw1-wrap {
+            width: calc(100% - 24px);
+          }
+
+          #dw1Section .dw1-layout {
+            gap: 17px;
+          }
+
+          #dw1Section .dw1-aside {
+            padding: 24px 20px;
+            border-radius: 22px;
+          }
+
+          #dw1Section .dw1-logo {
+            width: 70px;
+          }
+
+          #dw1Section .dw1-card {
+            padding: 23px 16px;
+            border-radius: 22px;
+          }
+
+          #dw1Section .dw1-progress {
+            grid-template-columns: minmax(0,1fr) auto;
+            gap: 8px 12px;
+          }
+
+          #dw1Section .dw1-track {
+            grid-column: 1 / -1;
+            grid-row: 2;
+          }
+
+          #dw1Section .dw1-count {
+            justify-self: end;
+          }
+
+          #dw1Section .dw1-title {
+            font-size: clamp(2.35rem, 13vw, 3.2rem);
+          }
+
+          #dw1Section .dw1-section-head {
+            padding: 17px;
+          }
+
+          #dw1Section .dw1-actions {
+            flex-direction: column-reverse;
+          }
+
+          #dw1Section .dw1-action {
+            width: 100%;
+          }
+
+          #dw1Success .dw1-success-card {
+            padding: 31px 20px;
+            border-radius: 24px;
+          }
+        }
+      </style>
+    
+
+      <section id="dw1Section" aria-labelledby="dw1Title">
+        <div class="dw1-wrap">
+          <div class="dw1-layout">
+            <aside class="dw1-aside">
+              <img class="dw1-logo" src="assets/images/thulir-mark.png" alt="Thulir" />
+              <h1>Beginning again.</h1>
+              <p>For divorced or widowed adults ready to find meaningful companionship with dignity, privacy, and care.</p>
+
+              <div class="dw1-aside-meta">
+                <span><strong>Step 1 of 2</strong></span>
+                <span>Essential details + 43 questions</span>
+                <span>Private · Consent-led · Human-reviewed</span>
+              </div>
+            </aside>
+
+            <section class="dw1-card" aria-labelledby="dw1Title">
+              <div class="dw1-progress">
+                <strong>Step 1 of 2</strong>
+                <div class="dw1-track" aria-hidden="true">
+                  <div class="dw1-fill" style="width:50%"></div>
+                </div>
+                <span class="dw1-count">Essential details + 43 questions</span>
+              </div>
+
+
+          <div class="dw1-badge" id="dw1Plan">
+            Selected membership: <strong></strong>
+          </div>
+        
+
+
+              <h2 class="dw1-title" id="dw1Title">Getting to know you</h2>
+              <p class="dw1-subtitle">This first half covers family, children, lifestyle, preferences, and emotional readiness.</p>
+
+              <form id="dw1Form" novalidate>
+                <div class="dw1-questions" id="dw1Questions"></div>
+                <div class="dw1-error" id="dw1Error" role="alert"></div>
+
+                <div class="dw1-actions">
+                  <a class="dw1-action dw1-back" href="index.html#thlrJourneyChooser">Back</a>
+                  <button class="dw1-action dw1-next" type="submit">Next page</button>
+                </div>
+
+                <p class="dw1-submit-note">
+                  Your answers stay in this browser between Step 1 and Step 2.
+                </p>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <script>
+        (() => {
+          "use strict";
+
+          const section = document.getElementById("dw1Section");
+          if (!section || section.dataset.ready === "true") return;
+          section.dataset.ready = "true";
+
+          const questions = [{"kind": "section", "title": "Section 1 — Personal details", "copy": "Helps us understand the person behind the profile."}, {"id": "dw1_full_name", "label": "Full name", "type": "text", "required": true, "wide": false}, {"id": "dw1_age", "label": "Age", "type": "radio", "required": true, "wide": false, "options": ["25–30", "31–35", "36–40", "41–45", "46–50", "50+"]}, {"id": "dw1_gender", "label": "Gender", "type": "radio", "required": true, "wide": false, "options": ["Male", "Female", "Non-binary", "Prefer to self-describe", "Prefer not to say"]}, {"id": "dw1_city", "label": "City you currently live in", "type": "text", "required": true, "wide": false}, {"id": "dw1_phone", "label": "Contact number", "type": "tel", "required": true, "wide": false, "placeholder": "+91"}, {"id": "dw1_email", "label": "Email address", "type": "email", "required": true, "wide": false}, {"id": "dw1_contact_mode", "label": "Preferred mode of contact", "type": "checkbox", "required": true, "wide": false, "options": ["Call", "WhatsApp", "Email"]}, {"id": "dw1_contact_time", "label": "Best time to contact you", "type": "radio", "required": true, "wide": false, "options": ["Morning (8am–12pm)", "Afternoon (12–5pm)", "Evening (5–9pm)"]}, {"id": "dw1_languages", "label": "Mother tongue & languages spoken", "type": "checkbox", "required": true, "wide": false, "options": ["Tamil", "Telugu", "Kannada", "Hindi", "English", "Other"]}, {"id": "dw1_other_languages", "label": "Other languages you speak", "type": "text", "required": false, "wide": false, "placeholder": "Optional"}, {"id": "dw1_religion_caste", "label": "Religion & caste", "type": "text", "required": false, "wide": false, "placeholder": "Optional"}, {"id": "dw1_education", "label": "Educational qualification", "type": "radio", "required": true, "wide": false, "options": ["School", "Diploma", "Graduate", "Post-Graduate", "Doctorate"]}, {"id": "dw1_occupation", "label": "Occupation", "type": "text", "required": true, "wide": false}, {"id": "dw1_income", "label": "Approximate monthly income", "type": "text", "required": false, "wide": false, "placeholder": "Optional"}, {"id": "dw1_marital_status", "label": "Current marital status", "type": "radio", "required": true, "wide": false, "options": ["Divorced", "Widowed", "Single / Never married"]}, {"kind": "section", "title": "Stage 1 — Family & children", "copy": "Understanding your family situation helps us find someone genuinely compatible with your whole life."}, {"id": "dw1_q01", "label": "Do you have children?", "type": "radio", "required": true, "wide": false, "options": ["Yes", "No"]}, {"id": "dw1_q02", "label": "If yes — how many, and what are their ages?", "type": "textarea", "required": false, "wide": true}, {"id": "dw1_q03", "label": "Do your children live with you?", "type": "radio", "required": true, "wide": false, "options": ["Yes, full-time", "Shared custody", "No", "Not applicable"]}, {"id": "dw1_q04", "label": "Who do you currently live with?", "type": "radio", "required": true, "wide": false, "options": ["Alone", "With children", "With parents", "With extended family"]}, {"id": "dw1_q05", "label": "Are you open to a partner who has children?", "type": "radio", "required": true, "wide": false, "options": ["Yes, absolutely", "Open to it", "Depends on the person", "Prefer not"]}, {"id": "dw1_q06", "label": "Your preferred parenting approach with a partner's children", "type": "radio", "required": true, "wide": false, "options": ["Co-parent actively", "Respect existing arrangements", "Prefer to leave parenting to the primary parent", "Not applicable"]}, {"id": "dw1_q07", "label": "Would you like your family involved in the matching process?", "type": "radio", "required": true, "wide": false, "options": ["Yes", "Eventually, yes", "No", "Not sure"]}, {"kind": "section", "title": "Stage 1 — Lifestyle basics", "copy": "Your everyday habits help us understand who you are beyond a profile on paper."}, {"id": "dw1_q08", "label": "Dietary preference", "type": "radio", "required": true, "wide": false, "options": ["Vegetarian", "Non-vegetarian", "Eggetarian", "Vegan"]}, {"id": "dw1_q09", "label": "Do you smoke?", "type": "radio", "required": true, "wide": false, "options": ["No", "Occasionally", "Yes"]}, {"id": "dw1_q10", "label": "Do you drink alcohol?", "type": "radio", "required": true, "wide": false, "options": ["No", "Occasionally", "Yes"]}, {"id": "dw1_q11", "label": "How social are you?", "type": "radio", "required": true, "wide": false, "options": ["Love large gatherings", "Small close circles", "Mostly quiet", "Depends on my mood"]}, {"id": "dw1_q12", "label": "How important is religion or spirituality in your daily life?", "type": "scale", "required": true, "wide": false, "options": ["1", "2", "3", "4", "5"], "note": "1 = Not at all · 5 = Very much"}, {"id": "dw1_q13", "label": "What values matter most to you in life?", "type": "checkbox", "required": true, "wide": false, "options": ["Family", "Honesty", "Kindness", "Faith", "Ambition", "Simplicity", "Security", "Growth", "Independence"]}, {"kind": "section", "title": "Stage 1 — Partner preferences", "copy": "Be honest — this is not about perfection, but about genuine fit."}, {"id": "dw1_q14", "label": "Preferred age range of partner", "type": "radio", "required": true, "wide": false, "options": ["25–30", "31–35", "36–40", "41–45", "46–50", "Open to any age"]}, {"id": "dw1_q15", "label": "I am open to being matched with", "type": "radio", "required": true, "wide": false, "options": ["Men", "Women", "Either", "Prefer not to say"]}, {"id": "dw1_q16", "label": "Preferred marital background of partner", "type": "radio", "required": true, "wide": false, "options": ["Divorced", "Widowed", "Single / Never married", "Any"]}, {"id": "dw1_q17", "label": "Preferred location of partner", "type": "radio", "required": true, "wide": false, "options": ["Same city", "Same state", "Open to anywhere in India"]}, {"id": "dw1_q18", "label": "Preferred religion / caste", "type": "text", "required": false, "wide": false, "placeholder": "Optional"}, {"kind": "section", "title": "Stage 1 — Emotional readiness", "copy": "Take your time. There are no right answers — only honest ones."}, {"id": "dw1_q19", "label": "How ready do you feel to begin a new relationship?", "type": "scale", "required": true, "wide": false, "options": ["1", "2", "3", "4", "5"], "note": "1 = Not at all ready · 5 = Fully ready"}, {"kind": "section", "title": "Stage 1 — Lifestyle & personality", "copy": "Your everyday life, habits, and character — the things that shape real compatibility."}, {"id": "dw1_q20", "label": "What does a typical weekday look like for you?", "type": "textarea", "required": true, "wide": true}, {"id": "dw1_q21", "label": "How do you usually spend your weekends?", "type": "textarea", "required": true, "wide": true}, {"id": "dw1_q22", "label": "Are you more of a homebody or someone who loves being out?", "type": "radio", "required": true, "wide": false, "options": ["Homebody", "Love going out", "Mix of both", "Depends on my mood"]}, {"id": "dw1_q23", "label": "How important is alone time to you?", "type": "radio", "required": true, "wide": false, "options": ["Very important", "Somewhat important", "Not really needed"]}, {"id": "dw1_q24", "label": "How would you describe your relationship with order at home?", "type": "radio", "required": true, "wide": false, "options": ["Very organised", "Mostly tidy", "Middle ground", "Functional chaos"]}, {"id": "dw1_q25", "label": "How important is punctuality to you?", "type": "radio", "required": true, "wide": false, "options": ["Very important — always on time", "I try to be on time", "I run a little late", "Time is flexible for me"]}, {"id": "dw1_q26", "label": "How do you usually recharge when you feel stressed or overwhelmed?", "type": "textarea", "required": true, "wide": true}, {"id": "dw1_q27", "label": "How often do you spend time with friends or people close to you?", "type": "radio", "required": true, "wide": false, "options": ["Multiple times a week", "About once a week", "A few times a month", "Rarely", "I have become more of a homebody"]}, {"id": "dw1_q28", "label": "How do you feel about social media in daily life?", "type": "radio", "required": true, "wide": false, "options": ["Very active", "Moderate use", "Minimal use", "Avoid mostly", "Not on social media"]}, {"id": "dw1_q29", "label": "How do you feel about money — are you a saver or a spender?", "type": "radio", "required": true, "wide": false, "options": ["Disciplined saver", "Save but enjoy spending", "Try to balance", "Tend to spend freely", "Working on it"]}, {"id": "dw1_q30", "label": "How important is personal growth — reading, learning, self-improvement?", "type": "scale", "required": true, "wide": false, "options": ["1", "2", "3", "4", "5"], "note": "1 = Not a priority · 5 = Central to who I am"}, {"id": "dw1_q31", "label": "How important is aesthetics — your home, how you dress, your surroundings?", "type": "radio", "required": true, "wide": false, "options": ["Very important", "Somewhat important", "I value comfort over presentation", "Not important to me"]}, {"id": "dw1_q32", "label": "What does a perfect evening at home look like to you?", "type": "textarea", "required": true, "wide": true}, {"id": "dw1_q33", "label": "What do you enjoy doing in your free time?", "type": "textarea", "required": true, "wide": true}, {"id": "dw1_q34", "label": "Do you enjoy travel? What kind?", "type": "checkbox", "required": true, "wide": false, "options": ["Pilgrimage", "Leisure / beach", "Adventure", "Exploring new cities", "Road trips", "Not much into travel"]}, {"id": "dw1_q35", "label": "Creative interests", "type": "checkbox", "required": true, "wide": false, "options": ["Music", "Films", "Reading", "Cooking", "Art / craft", "Gardening", "Volunteering", "Other"]}, {"id": "dw1_q36", "label": "What is something small that brings you genuine joy every day?", "type": "textarea", "required": true, "wide": true}, {"kind": "section", "title": "Stage 1 — Character & communication", "copy": "How you think, feel, and communicate — especially in close relationships."}, {"id": "dw1_q37", "label": "How would you describe yourself in 3 words?", "type": "text", "required": true, "wide": false}, {"id": "dw1_q38", "label": "How would your closest friend describe you?", "type": "textarea", "required": true, "wide": true}, {"id": "dw1_q39", "label": "Are you more of a planner or someone who goes with the flow?", "type": "radio", "required": true, "wide": false, "options": ["Strong planner", "Mostly planner", "Mix of both", "Mostly spontaneous", "Completely spontaneous"]}, {"id": "dw1_q40", "label": "Are you more of an early bird or a night owl?", "type": "radio", "required": true, "wide": false, "options": ["Early bird — up by 6am", "Mostly morning person", "Mix", "Mostly night person", "Night owl"]}, {"id": "dw1_q41", "label": "How do you prefer to give and receive love and affection?", "type": "checkbox", "required": true, "wide": false, "options": ["Words of appreciation", "Quality time together", "Physical affection", "Acts of service", "Gifts and surprises"]}, {"id": "dw1_q42", "label": "How comfortable are you with expressing your feelings verbally?", "type": "radio", "required": true, "wide": false, "options": ["Very comfortable", "Comfortable when I trust someone", "Take time to open up", "Find it difficult", "Prefer to show through actions"]}, {"id": "dw1_q43", "label": "When you have a problem with someone close, what do you do?", "type": "radio", "required": true, "wide": false, "options": ["Bring it up immediately", "Wait for the right moment", "Drop hints", "Avoid the conversation", "Write it down first", "Depends"]}];
+          const form = document.getElementById("dw1Form");
+          const questionBox = document.getElementById("dw1Questions");
+          const errorBox = document.getElementById("dw1Error");
+          const planBox = document.getElementById("dw1Plan");
+
+          if (!form || !questionBox || !errorBox || !planBox) return;
+
+          const escapeHtml = (value) =>
+            String(value ?? "").replace(/[&<>"']/g, (character) => {
+              const entities = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+              };
+              return entities[character];
+            });
+
+          const getInputQuestions = () => questions.filter((item) => item.kind !== "section");
+
+          const renderLabel = (item, index) => {
+            const status = item.required
+              ? '<span class="dw1-required">*</span>'
+              : '<span class="dw1-optional">optional</span>';
+
+            return `
+              <span class="dw1-number">${String(index + 1).padStart(2, "0")}</span>
+              ${escapeHtml(item.label)}
+              ${status}
+            `;
+          };
+
+          const renderQuestion = (item, index) => {
+            if (item.kind === "section") {
+              return `
+                <div class="dw1-section-head">
+                  <h3>${escapeHtml(item.title)}</h3>
+                  <p>${escapeHtml(item.copy)}</p>
+                </div>
+              `;
+            }
+
+            const inputIndex = getInputQuestions().findIndex((question) => question.id === item.id);
+            const label = renderLabel(item, inputIndex);
+            const wide = item.wide ? " dw1-wide" : "";
+            const required = item.required ? " required" : "";
+            const note = item.note
+              ? `<small class="dw1-note">${escapeHtml(item.note)}</small>`
+              : "";
+
+            if (item.type === "radio" || item.type === "scale" || item.type === "checkbox") {
+              const inputType = item.type === "checkbox" ? "checkbox" : "radio";
+              const choices = (item.options || []).map((option) => `
+                <label class="dw1-choice">
+                  <input
+                    type="${inputType}"
+                    name="${item.id}"
+                    value="${escapeHtml(option)}"
+                    ${inputType === "radio" && item.required ? "required" : ""}
+                  />
+                  <span>${escapeHtml(option)}</span>
+                </label>
+              `).join("");
+
+              return `
+                <fieldset class="dw1-field${wide}" data-question-id="${item.id}">
+                  <legend class="dw1-legend">${label}</legend>
+                  <div class="dw1-choices">${choices}</div>
+                  ${note}
+                </fieldset>
+              `;
+            }
+
+            if (item.type === "textarea") {
+              return `
+                <div class="dw1-field${wide}" data-question-id="${item.id}">
+                  <label class="dw1-label" for="${item.id}">${label}</label>
+                  <textarea
+                    class="dw1-control"
+                    id="${item.id}"
+                    name="${item.id}"
+                    placeholder="${escapeHtml(item.placeholder || "")}"
+                    ${required}
+                  ></textarea>
+                  ${note}
+                </div>
+              `;
+            }
+
+            if (item.type === "file") {
+              return `
+                <div class="dw1-field${wide}" data-question-id="${item.id}">
+                  <label class="dw1-label" for="${item.id}">${label}</label>
+                  <input
+                    class="dw1-control"
+                    id="${item.id}"
+                    name="${item.id}"
+                    type="file"
+                    accept="${escapeHtml(item.accept || "")}"
+                    ${required}
+                  />
+                  ${note}
+                </div>
+              `;
+            }
+
+            return `
+              <div class="dw1-field${wide}" data-question-id="${item.id}">
+                <label class="dw1-label" for="${item.id}">${label}</label>
+                <input
+                  class="dw1-control"
+                  id="${item.id}"
+                  name="${item.id}"
+                  type="${escapeHtml(item.type || "text")}"
+                  placeholder="${escapeHtml(item.placeholder || "")}"
+                  ${required}
+                />
+                ${note}
+              </div>
+            `;
+          };
+
+          questionBox.innerHTML = questions.map(renderQuestion).join("");
+
+          const params = new URLSearchParams(window.location.search);
+          const selectedPlan =
+            params.get("plan") ||
+            sessionStorage.getItem("thulirPlan") ||
+            "";
+
+          if (selectedPlan) {
+            sessionStorage.setItem("thulirPlan", selectedPlan);
+            planBox.classList.add("is-visible");
+            planBox.querySelector("strong").textContent = selectedPlan;
+          }
+
+          sessionStorage.setItem("thulirJourneyType", "second-chapter");
+
+          let saved = {};
+          try {
+            saved = JSON.parse(sessionStorage.getItem("thulirSecondChapterStep1") || "{}");
+          } catch (error) {
+            saved = {};
+          }
+
+          Object.entries(saved).forEach(([name, value]) => {
+            const controls = form.querySelectorAll(`[name="${name}"]`);
+
+            controls.forEach((control) => {
+              if (control.type === "radio") {
+                control.checked = control.value === value;
+              } else if (control.type === "checkbox") {
+                const values = Array.isArray(value) ? value : [];
+                control.checked = values.includes(control.value);
+              } else if (control.type !== "file") {
+                control.value = value ?? "";
+              }
+            });
+          });
+
+          const validateCustomGroups = () => {
+            for (const item of getInputQuestions()) {
+              if (item.type === "checkbox" && item.required) {
+                const checked = form.querySelectorAll(
+                  `[name="${item.id}"]:checked`
+                );
+
+                if (!checked.length) {
+                  const field = form.querySelector(
+                    `[data-question-id="${item.id}"]`
+                  );
+
+                  field?.scrollIntoView({ behavior: "smooth", block: "center" });
+                  return `Please select at least one option for “${item.label}”.`;
+                }
+              }
+            }
+
+            return "";
+          };
+
+          form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const customError = validateCustomGroups();
+
+            if (customError) {
+              errorBox.textContent = customError;
+              errorBox.classList.add("is-visible");
+              return;
+            }
+
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              errorBox.textContent =
+                "Please complete every required question before continuing.";
+              errorBox.classList.add("is-visible");
+              return;
+            }
+
+            const data = {};
+
+            getInputQuestions().forEach((item) => {
+              const controls = form.querySelectorAll(`[name="${item.id}"]`);
+
+              if (item.type === "checkbox") {
+                data[item.id] = [...controls]
+                  .filter((control) => control.checked)
+                  .map((control) => control.value);
+              } else if (item.type === "radio" || item.type === "scale") {
+                data[item.id] =
+                  form.querySelector(`[name="${item.id}"]:checked`)?.value || "";
+              } else if (item.type === "file") {
+                data[item.id] = form.elements[item.id]?.files?.[0]?.name || "";
+              } else {
+                data[item.id] =
+                  String(form.elements[item.id]?.value || "").trim();
+              }
+            });
+
+            sessionStorage.setItem("thulirSecondChapterStep1", JSON.stringify(data));
+            errorBox.classList.remove("is-visible");
+
+            const destination = new URL("enroll-divorced-widowed-step-2.html", window.location.href);
+            if (selectedPlan) destination.searchParams.set("plan", selectedPlan);
+
+            window.location.href =
+              destination.pathname +
+              destination.search +
+              destination.hash;
+          });
+        })();
+      </script>
+    
+    </main>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-identity">
+            <img src="assets/images/thulir-mark.png" alt="" />
+            <div class="footer-brand">
+              <h2>Thulir <span class="tamil">· துளிர்</span></h2>
+              <div class="footer-tagline">Life always finds a way to grow.</div>
+            </div>
+          </div>
+
+          <div class="footer-nav-area">
+            <div class="footer-column">
+              <strong>Explore</strong>
+              <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#how-it-works">How it works</a>
+                <a href="index.html#membership">Membership</a>
+                <a href="index.html#faq">FAQ</a>
+              </nav>
+            </div>
+
+            <div class="footer-column">
+              <strong>More</strong>
+              <nav class="footer-links">
+                <a href="process.html">Full process</a>
+                <a href="founder-story.html">Founder’s story</a>
+                <a href="index.html#thlrJourneyChooser">Enrollment</a>
+                <span>Chennai, India</span>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Thulir. Chennai, India. All rights reserved.</span>
+          <span>Human-led · Verified · Consent-first</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/global.js"></script>
+
+  </body>
+</html>

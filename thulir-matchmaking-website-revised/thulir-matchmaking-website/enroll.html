@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Read why Thulir was founded and the belief behind its human-led approach to matchmaking."
+    />
+    <meta name="theme-color" content="#fbf7f1" />
+    <title>Founder’s Story · Thulir</title>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"
+          ><img src="assets/images/thulir-mark.png" alt="" /><span
+            class="brand-word"
+            ><strong>Thulir</strong><span>துளிர்</span></span
+          ></a
+        >
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a><a href="index.html#about">About</a
+          ><a href="index.html#how-it-works">How it works</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a
+          ><a class="active" href="founder-story.html">Our story</a
+          ><a class="btn btn-primary nav-cta" href="enroll.html"
+            >Begin journey</a
+          >
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" aria-hidden="true">
+      <aside class="mobile-panel">
+        <div class="mobile-panel-head">
+          <a class="brand" href="index.html"
+            ><img src="assets/images/thulir-mark.png" alt="" /><span
+              class="brand-word"
+              ><strong>Thulir</strong><span>துளிர்</span></span
+            ></a
+          ><button class="mobile-close" aria-label="Close menu">Close</button>
+        </div>
+        <nav class="mobile-links">
+          <a href="index.html">Home</a
+          ><a href="index.html#about">About Thulir</a
+          ><a href="index.html#how-it-works">How it works</a
+          ><a href="process.html">Full process</a
+          ><a href="index.html#membership">Membership</a
+          ><a href="index.html#faq">FAQ</a
+          ><a href="founder-story.html">Founder’s story</a>
+        </nav>
+        <a class="btn btn-primary" href="enroll.html">Begin your journey</a>
+        <p class="mobile-caption">Human-led · Verified · Consent-first</p>
+      </aside>
+    </div>
+<main id="main">
+  <!-- =====================================================
+       THULIR ENROLLMENT STEP 1
+       Fully isolated section: unique class names + inline CSS + inline JS
+  ====================================================== -->
+
+  <style>
+    /* ---------- Isolated enrollment section only ---------- */
+    #thlrStepOneSection,
+    #thlrStepOneSection *,
+    #thlrStepOneSection *::before,
+    #thlrStepOneSection *::after {
+      box-sizing: border-box;
+    }
+
+    #thlrStepOneSection {
+      --thlr-bg: #fbf7f1;
+      --thlr-paper: #fffdf8;
+      --thlr-ink: #392f27;
+      --thlr-muted: #756b62;
+      --thlr-olive: #7f881f;
+      --thlr-olive-dark: #596013;
+      --thlr-orange: #df813c;
+      --thlr-line: rgba(67, 51, 38, 0.14);
+      --thlr-dark: #3b3026;
+      --thlr-serif: "Cormorant Garamond", Georgia, serif;
+      --thlr-sans: "Manrope", Arial, sans-serif;
+
+      position: relative;
+      isolation: isolate;
+      contain: layout paint;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100svh;
+      margin: 0;
+      padding: 128px 0 72px;
+      overflow-x: clip;
+      color: var(--thlr-ink);
+      font-family: var(--thlr-sans);
+      background:
+        radial-gradient(circle at 96% 3%, rgba(223, 129, 60, 0.13), transparent 25%),
+        radial-gradient(circle at 4% 95%, rgba(127, 136, 31, 0.08), transparent 28%),
+        var(--thlr-bg);
+    }
+
+    #thlrStepOneSection .thlr1-wrap {
+      width: min(1180px, calc(100% - 40px));
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    #thlrStepOneSection .thlr1-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1.42fr);
+      align-items: start;
+      gap: 28px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    #thlrStepOneSection .thlr1-layout > * {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    /* ---------- Left introduction card ---------- */
+    #thlrStepOneSection .thlr1-intro-card {
+      position: sticky;
+      top: 108px;
+      width: 100%;
+      min-width: 0;
+      padding: 34px;
+      overflow: hidden;
+      border-radius: 30px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 100% 100%, rgba(223, 129, 60, 0.2), transparent 34%),
+        var(--thlr-dark);
+      box-shadow: 0 24px 60px rgba(57, 47, 39, 0.16);
+    }
+
+    #thlrStepOneSection .thlr1-intro-card::after {
+      content: "";
+      position: absolute;
+      right: -105px;
+      bottom: -115px;
+      width: 225px;
+      height: 225px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #thlrStepOneSection .thlr1-intro-logo {
+      display: block;
+      width: 105px;
+      height: auto;
+      max-width: 100%;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
+    }
+
+    #thlrStepOneSection .thlr1-intro-title {
+      margin: 24px 0 15px;
+      font: 600 clamp(2.45rem, 4.2vw, 3.5rem) / 0.92 var(--thlr-serif);
+      overflow-wrap: anywhere;
+    }
+
+    #thlrStepOneSection .thlr1-intro-copy {
+      margin: 0;
+      color: #d8cec5;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      overflow-wrap: anywhere;
+    }
+
+    #thlrStepOneSection .thlr1-privacy {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: #c4b8ad;
+      font-size: 0.73rem;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    /* ---------- Form card ---------- */
+    #thlrStepOneSection .thlr1-form-card {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      padding: clamp(24px, 4.5vw, 48px);
+      overflow: hidden;
+      border: 1px solid var(--thlr-line);
+      border-radius: 30px;
+      background: var(--thlr-paper);
+      box-shadow: 0 26px 70px rgba(60, 43, 29, 0.12);
+    }
+
+    #thlrStepOneSection .thlr1-progress {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 32px;
+    }
+
+    #thlrStepOneSection .thlr1-progress-label {
+      color: var(--thlr-ink);
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #thlrStepOneSection .thlr1-progress-track {
+      width: 100%;
+      min-width: 0;
+      height: 6px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #f1e8dd;
+    }
+
+    #thlrStepOneSection .thlr1-progress-fill {
+      width: 50%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--thlr-olive), var(--thlr-orange));
+    }
+
+    #thlrStepOneSection .thlr1-progress-count {
+      color: var(--thlr-muted);
+      font-size: 0.73rem;
+      white-space: nowrap;
+    }
+
+    #thlrStepOneSection .thlr1-plan {
+      display: none;
+      width: 100%;
+      margin-bottom: 22px;
+      padding: 12px 15px;
+      border: 1px solid rgba(127, 136, 31, 0.22);
+      border-radius: 14px;
+      background: rgba(127, 136, 31, 0.08);
+      color: var(--thlr-ink);
+      font-size: 0.82rem;
+      overflow-wrap: anywhere;
+    }
+
+    #thlrStepOneSection .thlr1-plan.thlr1-plan-visible {
+      display: block;
+    }
+
+    #thlrStepOneSection .thlr1-plan strong {
+      color: var(--thlr-olive-dark);
+      text-transform: capitalize;
+    }
+
+    #thlrStepOneSection .thlr1-form-title {
+      margin: 0 0 10px;
+      font: 600 clamp(2.55rem, 5vw, 4.45rem) / 0.94 var(--thlr-serif);
+      overflow-wrap: anywhere;
+    }
+
+    #thlrStepOneSection .thlr1-form-subtitle {
+      margin: 0 0 32px;
+      color: var(--thlr-muted);
+      font-size: 0.95rem;
+      line-height: 1.72;
+      overflow-wrap: anywhere;
+    }
+
+    /* ---------- Question grid ---------- */
+    #thlrStepOneSection .thlr1-question-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    #thlrStepOneSection .thlr1-item {
+      display: grid;
+      gap: 8px;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    #thlrStepOneSection .thlr1-item-wide {
+      grid-column: 1 / -1;
+    }
+
+    #thlrStepOneSection .thlr1-label,
+    #thlrStepOneSection .thlr1-legend {
+      display: block;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      color: #514438;
+      font-size: 0.81rem;
+      font-weight: 700;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    #thlrStepOneSection .thlr1-number {
+      margin-right: 6px;
+      color: var(--thlr-orange);
+    }
+
+    #thlrStepOneSection .thlr1-required {
+      color: #b25339;
+    }
+
+    #thlrStepOneSection .thlr1-optional {
+      color: #9a8c7f;
+      font-size: 0.68rem;
+      font-weight: 500;
+    }
+
+    #thlrStepOneSection .thlr1-control {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 13px 14px;
+      border: 1px solid var(--thlr-line);
+      border-radius: 14px;
+      outline: 0;
+      background: #fffdfb;
+      color: var(--thlr-ink);
+      font: inherit;
+      line-height: 1.4;
+      appearance: auto;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #thlrStepOneSection select.thlr1-control {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #thlrStepOneSection textarea.thlr1-control {
+      min-height: 116px;
+      resize: vertical;
+    }
+
+    #thlrStepOneSection .thlr1-control:focus {
+      border-color: var(--thlr-olive);
+      box-shadow: 0 0 0 4px rgba(127, 136, 31, 0.09);
+    }
+
+    /* ---------- Radio chips ---------- */
+    #thlrStepOneSection .thlr1-chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    #thlrStepOneSection .thlr1-chip {
+      position: relative;
+      display: block;
+      min-width: 0;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    #thlrStepOneSection .thlr1-chip input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #thlrStepOneSection .thlr1-chip span {
+      display: block;
+      max-width: 100%;
+      padding: 0.62rem 0.82rem;
+      border: 1px solid var(--thlr-line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--thlr-ink);
+      font-size: 0.74rem;
+      line-height: 1.42;
+      cursor: pointer;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    #thlrStepOneSection .thlr1-chip input:checked + span {
+      border-color: var(--thlr-ink);
+      background: var(--thlr-ink);
+      color: #fff;
+    }
+
+    #thlrStepOneSection .thlr1-chip input:focus-visible + span {
+      outline: 3px solid rgba(223, 129, 60, 0.28);
+      outline-offset: 2px;
+    }
+
+    /* ---------- Consent ---------- */
+    #thlrStepOneSection .thlr1-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      padding: 16px;
+      border: 1px solid var(--thlr-line);
+      border-radius: 15px;
+      background: var(--thlr-bg);
+    }
+
+    #thlrStepOneSection .thlr1-consent input {
+      width: 18px;
+      min-width: 18px;
+      max-width: 18px;
+      height: 18px;
+      margin: 3px 0 0;
+      flex: 0 0 18px;
+    }
+
+    #thlrStepOneSection .thlr1-consent label {
+      min-width: 0;
+      max-width: 100%;
+      color: var(--thlr-muted);
+      font-size: 0.77rem;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    /* ---------- Error and actions ---------- */
+    #thlrStepOneSection .thlr1-error {
+      display: none;
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px 14px;
+      border: 1px solid #efc8bb;
+      border-radius: 12px;
+      background: #fff0eb;
+      color: #a03f2b;
+      font-size: 0.8rem;
+      line-height: 1.55;
+    }
+
+    #thlrStepOneSection .thlr1-error.thlr1-error-visible {
+      display: block;
+    }
+
+    #thlrStepOneSection .thlr1-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      min-width: 0;
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--thlr-line);
+    }
+
+    #thlrStepOneSection .thlr1-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      max-width: 100%;
+      padding: 0.78rem 1.2rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--thlr-ink);
+      font-family: var(--thlr-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #thlrStepOneSection .thlr1-action-back {
+      border-color: var(--thlr-line);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    #thlrStepOneSection .thlr1-action-next {
+      background: var(--thlr-ink);
+      color: #fff;
+      box-shadow: 0 13px 30px rgba(57, 47, 39, 0.18);
+    }
+
+    #thlrStepOneSection .thlr1-action-next::after {
+      content: "↗";
+      margin-left: 9px;
+    }
+
+    #thlrStepOneSection .thlr1-action:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ---------- Tablet ---------- */
+    @media (max-width: 920px) {
+      #thlrStepOneSection {
+        padding-top: 110px;
+      }
+
+      #thlrStepOneSection .thlr1-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      #thlrStepOneSection .thlr1-intro-card {
+        position: relative;
+        top: auto;
+      }
+
+      #thlrStepOneSection .thlr1-question-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      #thlrStepOneSection .thlr1-item-wide {
+        grid-column: auto;
+      }
+    }
+
+    /* ---------- Phones ---------- */
+    @media (max-width: 650px) {
+      #thlrStepOneSection {
+        padding: 92px 0 46px;
+      }
+
+      #thlrStepOneSection .thlr1-wrap {
+        width: calc(100% - 24px);
+      }
+
+      #thlrStepOneSection .thlr1-layout {
+        gap: 17px;
+      }
+
+      #thlrStepOneSection .thlr1-intro-card {
+        padding: 24px 20px;
+        border-radius: 22px;
+      }
+
+      #thlrStepOneSection .thlr1-intro-logo {
+        width: 70px;
+      }
+
+      #thlrStepOneSection .thlr1-intro-title {
+        margin: 17px 0 11px;
+        font-size: 2.25rem;
+      }
+
+      #thlrStepOneSection .thlr1-form-card {
+        padding: 23px 16px;
+        border-radius: 22px;
+      }
+
+      #thlrStepOneSection .thlr1-progress {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px 12px;
+      }
+
+      #thlrStepOneSection .thlr1-progress-track {
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+
+      #thlrStepOneSection .thlr1-progress-count {
+        justify-self: end;
+      }
+
+      #thlrStepOneSection .thlr1-form-title {
+        font-size: clamp(2.35rem, 13vw, 3.2rem);
+      }
+
+      #thlrStepOneSection .thlr1-question-list {
+        gap: 17px;
+      }
+
+      #thlrStepOneSection .thlr1-actions {
+        flex-direction: column-reverse;
+      }
+
+      #thlrStepOneSection .thlr1-action {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      #thlrStepOneSection .thlr1-wrap {
+        width: calc(100% - 18px);
+      }
+
+      #thlrStepOneSection .thlr1-form-card {
+        padding-right: 13px;
+        padding-left: 13px;
+      }
+
+      #thlrStepOneSection .thlr1-intro-card {
+        padding-right: 17px;
+        padding-left: 17px;
+      }
+
+      #thlrStepOneSection .thlr1-progress-label,
+      #thlrStepOneSection .thlr1-progress-count {
+        font-size: 0.66rem;
+      }
+    }
+  </style>
+
+  <section id="thlrStepOneSection" aria-labelledby="thlrStepOneTitle">
+    <div class="thlr1-wrap">
+      <div class="thlr1-layout">
+        <aside class="thlr1-intro-card">
+          <img
+            class="thlr1-intro-logo"
+            src="assets/images/thulir-mark.png"
+            alt="Thulir"
+          />
+
+          <h1 class="thlr1-intro-title">Tell us your story.</h1>
+
+          <p class="thlr1-intro-copy">
+            This first step helps us understand your background, life, and
+            readiness — without judgment and without rushing you.
+          </p>
+
+          <div class="thlr1-privacy">
+            Private by design · Consent-first · Reviewed only by the Thulir team
+          </div>
+        </aside>
+
+        <section class="thlr1-form-card" aria-labelledby="thlrStepOneTitle">
+          <div class="thlr1-progress">
+            <strong class="thlr1-progress-label">Step 1 of 2</strong>
+
+            <div class="thlr1-progress-track" aria-hidden="true">
+              <div class="thlr1-progress-fill"></div>
+            </div>
+
+            <span class="thlr1-progress-count">30 questions</span>
+          </div>
+
+          <div class="thlr1-plan" id="thlrStepOnePlan">
+            Selected membership: <strong></strong>
+          </div>
+
+          <h2 class="thlr1-form-title" id="thlrStepOneTitle">About you</h2>
+
+          <p class="thlr1-form-subtitle">
+            Required questions are marked with *. You may pause and return in
+            this browser before continuing.
+          </p>
+
+          <form id="thlrStepOneForm" novalidate>
+            <div
+              class="thlr1-question-list"
+              id="thlrStepOneQuestions"
+            ></div>
+
+            <div
+              class="thlr1-error"
+              id="thlrStepOneError"
+              role="alert"
+            ></div>
+
+            <div class="thlr1-actions">
+              <a
+                class="thlr1-action thlr1-action-back"
+                href="index.html#membership"
+              >
+                Back to membership
+              </a>
+
+              <button
+                class="thlr1-action thlr1-action-next"
+                type="submit"
+              >
+                Next page
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const section = document.getElementById("thlrStepOneSection");
+      if (!section || section.dataset.ready === "true") return;
+      section.dataset.ready = "true";
+
+      const questions = [
+        {
+          id: "s1_q01",
+          label: "Full legal name",
+          type: "text",
+          required: true,
+          wide: true,
+          placeholder: "As it appears on your ID",
+        },
+        {
+          id: "s1_q02",
+          label: "Name you prefer to be called",
+          type: "text",
+          required: true,
+        },
+        {
+          id: "s1_q03",
+          label: "Date of birth",
+          type: "date",
+          required: true,
+        },
+        {
+          id: "s1_q04",
+          label: "Email address",
+          type: "email",
+          required: true,
+        },
+        {
+          id: "s1_q05",
+          label: "Mobile / WhatsApp number",
+          type: "tel",
+          required: true,
+          placeholder: "+91",
+        },
+        {
+          id: "s1_q06",
+          label: "Current city",
+          type: "text",
+          required: true,
+        },
+        {
+          id: "s1_q07",
+          label: "State / Union Territory",
+          type: "text",
+          required: true,
+        },
+        {
+          id: "s1_q08",
+          label: "Current country of residence",
+          type: "text",
+          required: true,
+          value: "India",
+        },
+        {
+          id: "s1_q09",
+          label: "Gender identity",
+          type: "select",
+          required: true,
+          options: [
+            "Woman",
+            "Man",
+            "Non-binary",
+            "Prefer to self-describe",
+            "Prefer not to say",
+          ],
+        },
+        {
+          id: "s1_q10",
+          label: "Pronouns",
+          type: "select",
+          required: false,
+          options: [
+            "She / her",
+            "He / him",
+            "They / them",
+            "Prefer to self-describe",
+            "Prefer not to say",
+          ],
+        },
+        {
+          id: "s1_q11",
+          label: "Current marital status",
+          type: "select",
+          required: true,
+          options: [
+            "Never married",
+            "Divorced",
+            "Widowed",
+            "Legally separated",
+            "Other",
+          ],
+        },
+        {
+          id: "s1_q12",
+          label: "Do you have children?",
+          type: "radio",
+          required: true,
+          options: [
+            "No",
+            "Yes — living with me",
+            "Yes — not living with me",
+            "Prefer to discuss privately",
+          ],
+        },
+        {
+          id: "s1_q13",
+          label: "Please share anything important about your children",
+          type: "textarea",
+          required: false,
+          wide: true,
+          placeholder:
+            "Ages, living arrangements, or anything you want your matchmaker to understand",
+        },
+        {
+          id: "s1_q14",
+          label: "Occupation / role",
+          type: "text",
+          required: true,
+        },
+        {
+          id: "s1_q15",
+          label: "Industry or field of work",
+          type: "text",
+          required: true,
+        },
+        {
+          id: "s1_q16",
+          label: "Highest education completed",
+          type: "select",
+          required: true,
+          options: [
+            "School",
+            "Diploma",
+            "Undergraduate degree",
+            "Postgraduate degree",
+            "Doctorate / professional degree",
+            "Other",
+          ],
+        },
+        {
+          id: "s1_q17",
+          label: "Languages you speak comfortably",
+          type: "text",
+          required: true,
+          wide: true,
+          placeholder: "Tamil, English, Hindi…",
+        },
+        {
+          id: "s1_q18",
+          label: "Religion or spiritual outlook",
+          type: "text",
+          required: false,
+          placeholder: "Optional",
+        },
+        {
+          id: "s1_q19",
+          label: "Community / caste information",
+          type: "text",
+          required: false,
+          placeholder: "Entirely optional",
+        },
+        {
+          id: "s1_q20",
+          label: "Height",
+          type: "text",
+          required: false,
+          placeholder: "e.g. 168 cm",
+        },
+        {
+          id: "s1_q21",
+          label: "Dietary preference",
+          type: "select",
+          required: true,
+          options: [
+            "Vegetarian",
+            "Vegan",
+            "Eggetarian",
+            "Non-vegetarian",
+            "Jain",
+            "No fixed preference",
+            "Other",
+          ],
+        },
+        {
+          id: "s1_q22",
+          label: "Smoking",
+          type: "radio",
+          required: true,
+          options: [
+            "Never",
+            "Occasionally",
+            "Regularly",
+            "Prefer to discuss",
+          ],
+        },
+        {
+          id: "s1_q23",
+          label: "Alcohol",
+          type: "radio",
+          required: true,
+          options: [
+            "Never",
+            "Socially",
+            "Occasionally",
+            "Regularly",
+            "Prefer to discuss",
+          ],
+        },
+        {
+          id: "s1_q24",
+          label: "Current living arrangement",
+          type: "select",
+          required: true,
+          options: [
+            "Living independently",
+            "With parents / family",
+            "With children",
+            "Shared accommodation",
+            "Other",
+          ],
+        },
+        {
+          id: "s1_q25",
+          label: "Are you open to relocating?",
+          type: "radio",
+          required: true,
+          options: [
+            "Yes",
+            "Maybe, for the right person",
+            "No",
+            "Prefer to discuss",
+          ],
+        },
+        {
+          id: "s1_q26",
+          label: "What does a typical weekday look like for you?",
+          type: "textarea",
+          required: true,
+          wide: true,
+        },
+        {
+          id: "s1_q27",
+          label: "How do you usually spend your weekends?",
+          type: "textarea",
+          required: true,
+          wide: true,
+        },
+        {
+          id: "s1_q28",
+          label: "Your hobbies, interests, and communities",
+          type: "textarea",
+          required: true,
+          wide: true,
+        },
+        {
+          id: "s1_q29",
+          label: "Why does this feel like the right time to begin?",
+          type: "textarea",
+          required: true,
+          wide: true,
+          placeholder: "Share as much or as little as feels comfortable",
+        },
+        {
+          id: "s1_q30",
+          label:
+            "I confirm that I am 25 or older, the information shared is genuine, and Thulir may contact me privately about this enrollment.",
+          type: "consent",
+          required: true,
+          wide: true,
+        },
+      ];
+
+      const form = document.getElementById("thlrStepOneForm");
+      const questionBox = document.getElementById("thlrStepOneQuestions");
+      const errorBox = document.getElementById("thlrStepOneError");
+      const planBox = document.getElementById("thlrStepOnePlan");
+
+      if (!form || !questionBox || !errorBox || !planBox) return;
+
+      const escapeHtml = (value) =>
+        String(value ?? "").replace(/[&<>"']/g, (character) => {
+          const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;",
+          };
+          return entities[character];
+        });
+
+      const labelHtml = (question, index) => {
+        const status = question.required
+          ? '<span class="thlr1-required">*</span>'
+          : '<span class="thlr1-optional">optional</span>';
+
+        return `
+          <span class="thlr1-number">${String(index + 1).padStart(2, "0")}</span>
+          ${escapeHtml(question.label)}
+          ${status}
+        `;
+      };
+
+      const renderQuestion = (question, index) => {
+        const wideClass = question.wide ? " thlr1-item-wide" : "";
+        const label = labelHtml(question, index);
+        const requiredAttribute = question.required ? " required" : "";
+
+        if (question.type === "consent") {
+          return `
+            <div class="thlr1-item${wideClass}">
+              <div class="thlr1-consent">
+                <input
+                  id="${question.id}"
+                  name="${question.id}"
+                  type="checkbox"
+                  ${requiredAttribute}
+                />
+                <label for="${question.id}">${label}</label>
+              </div>
+            </div>
+          `;
+        }
+
+        if (question.type === "radio") {
+          const options = question.options
+            .map(
+              (option) => `
+                <label class="thlr1-chip">
+                  <input
+                    type="radio"
+                    name="${question.id}"
+                    value="${escapeHtml(option)}"
+                    ${requiredAttribute}
+                  />
+                  <span>${escapeHtml(option)}</span>
+                </label>
+              `,
+            )
+            .join("");
+
+          return `
+            <fieldset class="thlr1-item${wideClass}">
+              <legend class="thlr1-legend">${label}</legend>
+              <div class="thlr1-chip-list">${options}</div>
+            </fieldset>
+          `;
+        }
+
+        let control = "";
+
+        if (question.type === "select") {
+          const options = question.options
+            .map(
+              (option) =>
+                `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`,
+            )
+            .join("");
+
+          control = `
+            <select
+              class="thlr1-control"
+              id="${question.id}"
+              name="${question.id}"
+              ${requiredAttribute}
+            >
+              <option value="">Choose an option</option>
+              ${options}
+            </select>
+          `;
+        } else if (question.type === "textarea") {
+          control = `
+            <textarea
+              class="thlr1-control"
+              id="${question.id}"
+              name="${question.id}"
+              placeholder="${escapeHtml(question.placeholder || "")}"
+              ${requiredAttribute}
+            ></textarea>
+          `;
+        } else {
+          control = `
+            <input
+              class="thlr1-control"
+              id="${question.id}"
+              name="${question.id}"
+              type="${question.type}"
+              value="${escapeHtml(question.value || "")}"
+              placeholder="${escapeHtml(question.placeholder || "")}"
+              ${requiredAttribute}
+            />
+          `;
+        }
+
+        return `
+          <div class="thlr1-item${wideClass}">
+            <label class="thlr1-label" for="${question.id}">${label}</label>
+            ${control}
+          </div>
+        `;
+      };
+
+      questionBox.innerHTML = questions.map(renderQuestion).join("");
+
+      const params = new URLSearchParams(window.location.search);
+      const selectedPlan = params.get("plan") || "";
+
+      if (selectedPlan) {
+        sessionStorage.setItem("thulirPlan", selectedPlan);
+        planBox.classList.add("thlr1-plan-visible");
+        planBox.querySelector("strong").textContent = selectedPlan;
+      } else {
+        sessionStorage.removeItem("thulirPlan");
+      }
+
+      let savedData = {};
+
+      try {
+        savedData = JSON.parse(
+          sessionStorage.getItem("thulirStep1") || "{}",
+        );
+      } catch (error) {
+        savedData = {};
+      }
+
+      Object.entries(savedData).forEach(([name, value]) => {
+        const controls = form.querySelectorAll(`[name="${CSS.escape(name)}"]`);
+
+        controls.forEach((control) => {
+          if (control.type === "radio") {
+            control.checked = control.value === value;
+          } else if (control.type === "checkbox") {
+            control.checked = value === true;
+          } else {
+            control.value = value ?? "";
+          }
+        });
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          errorBox.textContent =
+            "Please complete every required question before continuing.";
+          errorBox.classList.add("thlr1-error-visible");
+          return;
+        }
+
+        const data = {};
+
+        questions.forEach((question) => {
+          if (question.type === "radio") {
+            data[question.id] =
+              form.querySelector(`[name="${question.id}"]:checked`)?.value || "";
+          } else if (question.type === "consent") {
+            data[question.id] = Boolean(form.elements[question.id]?.checked);
+          } else {
+            data[question.id] =
+              String(form.elements[question.id]?.value || "").trim();
+          }
+        });
+
+        sessionStorage.setItem("thulirStep1", JSON.stringify(data));
+        errorBox.classList.remove("thlr1-error-visible");
+        window.location.href = "enroll-step-2.html";
+      });
+    })();
+  </script>
+</main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-identity">
+            <img src="assets/images/thulir-mark.png" alt="" />
+            <div class="footer-brand">
+              <h2>Thulir <span class="tamil">· துளிர்</span></h2>
+              <div class="footer-tagline">Life always finds a way to grow.</div>
+            </div>
+          </div>
+          <div class="footer-nav-area">
+            <div class="footer-column">
+              <strong>Explore</strong>
+              <nav class="footer-links">
+                <a href="index.html">Home</a><a href="index.html#about">About</a
+                ><a href="index.html#how-it-works">How it works</a
+                ><a href="index.html#membership">Membership</a
+                ><a href="index.html#faq">FAQ</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <strong>More</strong>
+              <nav class="footer-links">
+                <a href="process.html">Full process</a
+                ><a href="founder-story.html">Founder’s story</a
+                ><a href="enroll.html">Enrollment</a><span>Chennai, India</span>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="footer-journey">
+          <p>
+            <strong>Ready for a thoughtful beginning?</strong>Your first step is
+            private, unhurried, and entirely yours.
+          </p>
+          <a class="btn" href="enroll.html">Begin your journey ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Thulir. Chennai, India. All rights reserved.</span
+          ><span>Human-led · Verified · Consent-first</span>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/global.js"></script>
+  </body>
+</html>
